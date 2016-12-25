@@ -28,7 +28,7 @@
 	};
  /* sensor standardization */
 		cust_accel@0 {
-			compatible 				= "mediatek,KXTJ2_1009";
+			compatible 				= "mediatek,kxtj2_1009_new";
 			i2c_num 				= <2>;
 			i2c_addr				= <0x0e 0 0 0>;
 			direction 				= <3>;
