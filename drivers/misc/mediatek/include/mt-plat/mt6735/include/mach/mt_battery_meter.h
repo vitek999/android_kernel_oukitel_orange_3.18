@@ -143,7 +143,7 @@
 // ============================================================*/
 /*#define SOC_BY_AUXADC*/
 #define SOC_BY_HW_FG
-/*#define HW_FG_FORCE_USE_SW_OCV*/
+#define HW_FG_FORCE_USE_SW_OCV
 /*#define SOC_BY_SW_FG*/
 
 /*
@@ -173,15 +173,15 @@
 #define FG_METER_RESISTANCE 0
 
 /* Qmax for battery  */
-#define Q_MAX_POS_50 1463
-#define Q_MAX_POS_25 1437
-#define Q_MAX_POS_0 1220
-#define Q_MAX_NEG_10 1137
+#define Q_MAX_POS_50	3938
+#define Q_MAX_POS_25	3932
+#define Q_MAX_POS_0	3913
+#define Q_MAX_NEG_10	3988
 
-#define Q_MAX_POS_50_H_CURRENT 1511
-#define Q_MAX_POS_25_H_CURRENT 1462
-#define Q_MAX_POS_0_H_CURRENT 818
-#define Q_MAX_NEG_10_H_CURRENT 149
+#define Q_MAX_POS_50_H_CURRENT	2500
+#define Q_MAX_POS_25_H_CURRENT	2390
+#define Q_MAX_POS_0_H_CURRENT	1814
+#define Q_MAX_NEG_10_H_CURRENT	696
 
 
 /* Discharge Percentage */
