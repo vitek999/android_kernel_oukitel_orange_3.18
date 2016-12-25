@@ -280,7 +280,7 @@
 // ============================================================*/
 /*#define SOC_BY_AUXADC*/
 #define SOC_BY_HW_FG
-/*#define HW_FG_FORCE_USE_SW_OCV*/
+#define HW_FG_FORCE_USE_SW_OCV
 /*#define SOC_BY_SW_FG*/
 
 /*
