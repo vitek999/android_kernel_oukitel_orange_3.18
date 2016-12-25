@@ -30,7 +30,7 @@
 		cust_accel@0 {
 			compatible 				= "mediatek,kxtj2_1009_new";
 			i2c_num 				= <2>;
-			i2c_addr				= <0x0e 0 0 0>;
+			i2c_addr				= <0xe 0 0 0>;
 			direction 				= <3>;
 			power_id 				= <0xffff>;
 			power_vol				= <0>;
