@@ -857,6 +857,7 @@ deps_config := \
 	drivers/misc/mediatek/alsps/cm36558/Kconfig \
 	drivers/misc/mediatek/alsps/cm36686-new/Kconfig \
 	drivers/misc/mediatek/alsps/cm36652-new/Kconfig \
+	drivers/misc/mediatek/alsps/ltr559/Kconfig \
 	drivers/misc/mediatek/alsps/Kconfig \
 	drivers/misc/mediatek/accelerometer/KXTJ2_1009-new/Kconfig \
 	drivers/misc/mediatek/accelerometer/bma222E-new/Kconfig \

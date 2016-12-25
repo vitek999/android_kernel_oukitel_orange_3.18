@@ -249,6 +249,8 @@ struct SENSOR_DATA {
 #define AAL_SET_ALS_MODE			_IOW(ALSPS, 0x14, int)
 #define AAL_GET_ALS_MODE			_IOR(ALSPS, 0x15, int)
 #define AAL_GET_ALS_DATA			_IOR(ALSPS, 0x16, int)
+#define ALSPS_GET_PS_THRESHOLD_VALUE    _IOR(ALSPS, 0x17, int)
+
 #ifdef CONFIG_COMPAT
 #define COMPAT_ALSPS_SET_PS_MODE				_IOW(ALSPS, 0x01, compat_int_t)
 #define COMPAT_ALSPS_GET_PS_MODE				_IOR(ALSPS, 0x02, compat_int_t)
