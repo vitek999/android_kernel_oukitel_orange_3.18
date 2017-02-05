@@ -1,42 +1,17 @@
+
 #!/bin/bash
+#export CONFIG_DEBUG_SECTION_MISMATCH=y
 
-export KBUILD_BUILD_USER=assusdan
-export KBUILD_BUILD_HOST=SRT
+echo "Export toolchains >>>"
 
-if [ -f arch/arm/boot/zImage-dtb ]
-then
-    echo 'Remove kernel...'
-    echo ""
-    rm arch/arm/boot/zImage*
-fi
+#export ARCH=arm CROSS_COMPILE=../*linaro*/bin/arm-linux-gnu-
+export ARCH=arm CROSS_COMPILE=../arm-eabi-4.8/bin/arm-eabi-
+echo "Make defconfig >>>"
 
-echo "Git pull..."
-git pull >/dev/null
-echo ""
+make benefit_m7_defconfig
+echo "Start build >>>"
 
-echo "Export toolchains..."
-export ARCH=arm CROSS_COMPILE=../*5.2*/bin/arm-cortex-linux-gnueabi-
-echo ""
-
-echo "Make defconfig..."
-make benefit_m7_defconfig >/dev/null
-echo ""
-
-echo "Start build..."
-time make -j4 >/dev/null 2>errors.log
-echo ""
-
-if [ ! -f arch/arm/boot/zImage-dtb ]
-then
-    echo "BUILD ERRORS!"
-    echo "BUILD ERRORS!"
-    echo "BUILD ERRORS!"
-else
-    echo 'Moving...'
-    cp arch/arm/boot/zImage-dtb /var/www/html/boot.img-kernel
-    mv arch/arm/boot/zImage-dtb boot.img-kernel
-fi
+	time make -j4
 
 echo "======================"
-echo $[$SECONDS / 60]' minutes '$[$SECONDS % 60]' seconds' 
-echo "======================"
+

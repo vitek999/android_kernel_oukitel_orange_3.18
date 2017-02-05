@@ -1,0 +1,822 @@
+ram console header, hw_status: 2, fiq step 0.
+inux:  Initializing.
+[    0.008040] <2> (0)[0:swapper/0]Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.008055] <2> (0)[0:swapper/0]Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.008337] <2> (0)[0:swapper/0][cpu_ntf] <00>c00dbbd8 (ratelimit_handler)
+[    0.008716] <2> (0)[0:swapper/0]CPU: Testing write buffer coherency: ok
+[    0.008758] <2> (0)[0:swapper/0][cpu_ntf] <00>c0026ed0 (smpboot_thread_call)
+[    0.009048] <2> (0)[1:swapper/0]CPU0: update cpu_capacity 1024
+[    0.009063] <2> (0)[1:swapper/0]CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.009245] <2> (0)[1:swapper/0]Setting up static identity map for 0x408bad00 - 0x408bad58
+[    0.009278] <2> (0)[1:swapper/0][cpu_ntf] <00>c002a800 (cpu_callback)
+[    0.020362] <2> (0)[1:swapper/0][cpu_ntf] <00>c003be4c (workqueue_cpu_up_callback)
+[    0.020378] <2> (0)[1:swapper/0][cpu_ntf] <00>c003c12c (workqueue_cpu_down_callback)
+[    0.020873] <2> (0)[1:swapper/0][cpu_ntf] <00>c004c0b0 (migration_call)
+[    0.020892] <2> (0)[1:swapper/0][cpu_ntf] <00>c004671c (sched_cpu_active)
+[    0.020907] <2> (0)[1:swapper/0][cpu_ntf] <00>c0049798 (sched_cpu_inactive)
+[    0.040418] <2> (0)[1:swapper/0]
+[    0.040418] <2>**********************************************************
+[    0.040435] <2> (0)[1:swapper/0]**   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[    0.040447] <2> (0)[1:swapper/0]**                                                      **
+[    0.040458] <2> (0)[1:swapper/0]** trace_printk() being used. Allocating extra memory.  **
+[    0.040469] <2> (0)[1:swapper/0]**                                                      **
+[    0.040480] <2> (0)[1:swapper/0]** This means that this is a DEBUG kernel and it is     **
+[    0.040491] <2> (0)[1:swapper/0]** unsafe for produciton use.                           **
+[    0.040502] <2> (0)[1:swapper/0]**                                                      **
+[    0.040514] <2> (0)[1:swapper/0]** If you see this message and you are not debugging    **
+[    0.040525] <2> (0)[1:swapper/0]** the kernel, report this immediately to your vendor!  **
+[    0.040536] <2> (0)[1:swapper/0]**                                                      **
+[    0.040547] <2> (0)[1:swapper/0]**   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[    0.040558] <2> (0)[1:swapper/0]**********************************************************
+[    0.040702] <2> (0)[1:swapper/0][cpu_ntf] <00>c00c389c (hotplug_event_notify)
+[    0.058027] <2> (0)[1:swapper/0]init_get_max_DRAM_size done. phone_dram_sz: 0x80000000, kernel_mem_sz: 0x7f330000
+[    0.070679] <2>-(0)[1:swapper/0]SCHED: intersects new_mask: 2, cpu_active_mask: 1
+[    0.070807] <2>-(0)[1:swapper/0]SCHED: intersects new_mask: 2, cpu_active_mask: 1
+[    0.070936] <2> (0)[1:swapper/0]Boot slave CPU
+[    0.070960] <2> (0)[1:swapper/0][Power/hotplug] mt_smp_boot_secondary, cpu: 1
+[    0.071127] <2>-(1)[0:swapper/1]CPU1: Booted secondary processor
+[    0.071135] <2>-(1)[0:swapper/1][Power/hotplug] platform_secondary_init, cpu: 1
+[    0.071185] <2>-(1)[0:swapper/1]CPU1: update cpu_capacity 1024
+[    0.071192] <2>-(1)[0:swapper/1]CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.071623] <2>-(0)[1:swapper/0]SCHED: intersects new_mask: 4, cpu_active_mask: 3
+[    0.071746] <2>-(0)[1:swapper/0]SCHED: intersects new_mask: 4, cpu_active_mask: 3
+[    0.071857] <2> (0)[1:swapper/0]Boot slave CPU
+[    0.071898] <2> (0)[1:swapper/0][Power/hotplug] mt_smp_boot_secondary, cpu: 2
+[    0.072062] <2>-(2)[0:swapper/2]CPU2: Booted secondary processor
+[    0.072070] <2>-(2)[0:swapper/2][Power/hotplug] platform_secondary_init, cpu: 2
+[    0.072116] <2>-(2)[0:swapper/2]CPU2: update cpu_capacity 1024
+[    0.072124] <2>-(2)[0:swapper/2]CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.072537] <2>-(2)[1:swapper/0]SCHED: intersects new_mask: 8, cpu_active_mask: 7
+[    0.072644] <2>-(2)[1:swapper/0]SCHED: intersects new_mask: 8, cpu_active_mask: 7
+[    0.072758] <2> (2)[1:swapper/0]Boot slave CPU
+[    0.072798] <2> (2)[1:swapper/0][Power/hotplug] mt_smp_boot_secondary, cpu: 3
+[    0.072960] <2>-(3)[0:swapper/3]CPU3: Booted secondary processor
+[    0.072968] <2>-(3)[0:swapper/3][Power/hotplug] platform_secondary_init, cpu: 3
+[    0.073012] <2>-(3)[0:swapper/3]CPU3: update cpu_capacity 1024
+[    0.073020] <2>-(3)[0:swapper/3]CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.073118] <2> (2)[1:swapper/0]Brought up 4 CPUs
+[    0.073151] <2> (2)[1:swapper/0]SMP: Total of 4 processors activated (104.00 BogoMIPS).
+[    0.073163] <2> (2)[1:swapper/0]CPU: All CPU(s) started in SVC mode.
+[    0.073377] <2> (2)[1:swapper/0][cpu_ntf] <00>c00432dc (sched_domains_numa_masks_update)
+[    0.073394] <2> (2)[1:swapper/0][cpu_ntf] <00>c004d8c8 (cpuset_cpu_active)
+[    0.073409] <2> (2)[1:swapper/0][cpu_ntf] <00>c004d930 (cpuset_cpu_inactive)
+[    0.073426] <2> (2)[1:swapper/0][cpu_ntf] <00>c00474c4 (hotplug_hrtick)
+[    0.073929] <2> (2)[1:swapper/0][cpu_ntf] <00>c02a3510 (device_hotplug_notifier)
+[    0.085716] <2> (2)[1:swapper/0]
+[    0.085716] <2> register_restart_handler- 0xc0f33194, Notify call: - 0xc0638398
+[    0.085735] <2> (2)[1:swapper/0]ARCH_RESET register mtk_restart_handler  ok!!!!
+[    0.086517] <2> (2)[1:swapper/0]VFP support v0.3: 
+[    0.086535] <2> (2)[1:swapper/0][cpu_ntf] <00>c00092b8 (vfp_hotplug)
+[    0.086553] <2> (2)[1:swapper/0]implementor 41 architecture 3 part 40 variant 3 rev 4
+[    0.088049] <2> (2)[1:swapper/0]pinctrl core: initialized pinctrl subsystem
+[    0.088468] <2> (2)[1:swapper/0]regulator-dummy: no parameters
+[    0.106543] <2> (2)[1:swapper/0]DEVINFO,devinfo init!
+[    0.106713] <2> (2)[1:swapper/0]DEVINFO,devinfoprobe
+[    0.108141] <2> (2)[1:swapper/0]DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.108251] <2> (2)[1:swapper/0]ramoops: using module parameters
+[    0.108398] <2> (2)[1:swapper/0]ramoops: pstore:address is 0x43f10000, size is 0xe0000, console_size is 0x10000, pmsg_size is 0x10000
+[    0.111003] <2> (2)[1:swapper/0]console [pstore-1] enabled
+[    0.111150] <2> (2)[1:swapper/0]pstore: Registered ramoops as persistent store backend
+[    0.111167] <2> (2)[1:swapper/0]ramoops: attached 0xe0000@0x43f10000, ecc: 0/0
+[    0.111522] <2> (2)[1:swapper/0][PWRAP] mt_pwrap_init
+[    0.111678] <2> (2)[1:swapper/0]PWRAP reg: 0xe0a0a000,  irq: 195
+[    0.111691] <2> (2)[1:swapper/0][PWRAP] real init: version Revision
+[    0.111704] <2> (2)[1:swapper/0][PWRAP] mt_pwrap_init---- debug1
+[    0.111883] <2> (2)[1:swapper/0][PWRAP] is_pwrap_init_done 1
+[    0.111927] <2> (2)[1:swapper/0][PWRAP] after MT6328 pwrap_write
+[    0.111952] <2> (2)[1:swapper/0][PWRAP] mt_pwrap_init----
+[    0.112028] <2> (2)[1:swapper/0][GPIO]   571: GPIO base addr is 0xe0a10000, get_gpio_vbase_early
+[    0.112193] <2> (2)[1:swapper/0][DRAMC]get CQDMA_BASE_ADDR @ e0a12c00
+[    0.112262] <2> (2)[1:swapper/0][DRAMC]get DRAMCAO_BASE_ADDR @ e0a14000
+[    0.112330] <2> (2)[1:swapper/0][DRAMC]get DDRPHY_BASE_ADDR @ e0a16000
+[    0.112397] <2> (2)[1:swapper/0][DRAMC]get DRAMCNAO_BASE_ADDR @ e0a18000
+[    0.112496] <2> (2)[1:swapper/0][DRAMC Driver] Dram Data Rate = 1066
+[    0.112510] <2> (2)[1:swapper/0][DRAMC Driver] dram can support Frequency Hopping
+[    0.112856] <2> (2)[1:swapper/0]mtk_wdt_init ok
+[    0.132226] <2> (2)[1:swapper/0]cpuidle: using governor ladder
+[    0.152233] <2> (2)[1:swapper/0]cpuidle: using governor menu
+[    0.172259] <2> (2)[1:swapper/0]cpuidle: using governor mtk_governor
+[    0.173676] <2> (2)[1:swapper/0]irq: no irq domain found for /bus/eintc@10005000 !
+[    0.175275] <2> (2)[1:swapper/0]******** MTK WDT driver probe!! ********
+[    0.178975] <2> (2)[1:swapper/0]irq: no irq domain found for /bus/eintc@10005000 !
+[    0.179135] <2> (2)[1:swapper/0]irq: no irq domain found for /bus/eintc@10005000 !
+[    0.179293] <2> (2)[1:swapper/0]irq: no irq domain found for /bus/eintc@10005000 !
+[    0.188844] <2> (2)[1:swapper/0]mt6735 pinctrl probe
+[    0.188862] <2> (2)[1:swapper/0]mtk_pctrl_init++++++
+[    0.190643] <2> (2)[1:swapper/0]irq: no irq domain found for /bus/eintc@10005000 !
+[    0.190821] <2> (2)[1:swapper/0]irq: no irq domain found for /bus/eintc@10005000 !
+[    0.207423] <2> (2)[1:swapper/0]irq: no irq domain found for /bus/eintc@10005000 !
+[    0.209032] <2> (2)[1:swapper/0]hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.209049] <2> (2)[1:swapper/0]hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.209412] <2> (2)[1:swapper/0]success to create gic debug driver
+[    0.209433] <2> (2)[1:swapper/0]success to create dump_irq sysfs files
+[    0.209598] <2> (2)[1:swapper/0][EIC] no max_deint_cnt specified
+[    0.209613] <2> (2)[1:swapper/0][EIC] no builtin_entry property
+[    0.211498] <2> (2)[1:swapper/0][SPM] find SCP_I2C0 node failed
+[    0.211513] <2> (2)[1:swapper/0][SPM] base scp_i2c0_base failed
+[    0.211737] <2> (2)[1:swapper/0][SPM] find SCP_I2C1 node failed
+[    0.211749] <2> (2)[1:swapper/0][SPM] base scp_i2c1_base failed
+[    0.211972] <2> (2)[1:swapper/0][SPM] find SCP_I2C2 node failed
+[    0.211985] <2> (2)[1:swapper/0][SPM] base scp_i2c2_base failed
+[    0.212208] <2> (2)[1:swapper/0][SPM] find I2C4 node failed
+[    0.212221] <2> (2)[1:swapper/0][SPM] base i2c4_base failed
+[    0.212237] <2> (2)[1:swapper/0][SPM] spm_base = e0a52000, scp_i2c0_base =   (null), scp_i2c1_base =   (null), scp_i2c2_base =   (null)
+[    0.212252] <2> (2)[1:swapper/0][SPM] spm_irq_0 = 197, spm_irq_1 = 198, spm_irq_2 = 199, spm_irq_3 = 200
+[    0.212619] <2>-(2)[1:swapper/0][Power/cpufreq] [WARNING]pmic table not initialized
+[    0.212686] <2>-(2)[1:swapper/0][SPM] [VcoreFS] STA: 0x202, REQ: 0x0
+[    0.214042] <3> (3)[1:swapper/0][Power/clkmgr] [mt_subsys_init]SYS_MD1, change state: (1->0)
+[    0.214828] <3> (3)[1:swapper/0][Power/clkmgr] [00][CG_INFRA]=[0x0000008a]
+[    0.214846] <3> (3)[1:swapper/0][Power/clkmgr] [01][CG_PERI ]=[0x3fc07ffc]
+[    0.214862] <3> (3)[1:swapper/0][Power/clkmgr] [02][CG_DISP0]=[0xfffcb3fc][0xfffcb3fc]
+[    0.214878] <3> (3)[1:swapper/0][Power/clkmgr] [03][CG_DISP1]=[0xfffffff0][0xfffffff0]
+[    0.214892] <3> (3)[1:swapper/0][Power/clkmgr] [04][CG_IMAGE]=[0x000003ff]
+[    0.214907] <3> (3)[1:swapper/0][Power/clkmgr] [05][CG_MFG  ]=[0x00000001]
+[    0.214921] <3> (3)[1:swapper/0][Power/clkmgr] [06][CG_AUDIO]=[0x0f0c0344]
+[    0.214937] <3> (3)[1:swapper/0][Power/clkmgr] [07][CG_VDEC0]=[0x00000010][0x00000010]
+[    0.214953] <3> (3)[1:swapper/0][Power/clkmgr] [08][CG_VDEC1]=[0x00000000][0x00000000]
+[    0.214967] <3> (3)[1:swapper/0]mt_clkmgr_init: CLKMGR_INCFILE_VER=CLKMGR_INCFILE_D2_LEGACY
+[    0.215050] <3> (3)[1:swapper/0][PTP] [PTP][VCORE] - Kernel Got from DT (0x58, 0x48, 0x48, 0x1)
+[    0.215537] <3> (3)[1:swapper/0]### CIRQ init done. ###
+[    0.215614] <3> (3)[1:swapper/0][DDP/ddp_drv]Register the disp driver
+[    0.254096] <0> (0)[1:swapper/0][cpu_ntf] <00>c0234cd0 (blk_cpu_notify)
+[    0.254134] <0> (0)[1:swapper/0][cpu_ntf] <00>c023518c (blk_iopoll_cpu_notify)
+[    0.254159] <0> (0)[1:swapper/0][cpu_ntf] <00>c023a670 (blk_mq_main_cpu_notify)
+[    0.254178] <0> (0)[1:swapper/0][cpu_ntf] <00>c023819c (blk_mq_queue_reinit_notify)
+[    0.255066] <1> (1)[1:swapper/0]M4Um4u_probe 2, of_iomap: 0xe0a84000, irq_num: 178, pDev: dae49c10
+[    0.255193] <1> (1)[1:swapper/0]M4U4G DRAM Mode is: 0
+[    0.255649] <1> (1)[1:swapper/0]M4Urequest_irq, irq_num=178
+[    0.255672] <1> (1)[1:swapper/0]M4Uconfig_port:MDP_RDMA,v1,s0
+[    0.255697] <1> (1)[1:swapper/0]M4Uconfig_port:MDP_WDMA,v1,s0
+[    0.255721] <1> (1)[1:swapper/0]M4Uconfig_port:MDP_WROT,v1,s0
+[    0.256403] <1> (1)[1:swapper/0]MMP: MMProfileEnable(): enable: 1
+[    0.256443] <1> (1)[1:swapper/0][GPIO] version: mt-gpio
+[    0.256567] <1> (1)[1:swapper/0][GPIO]   552: GPIO base addr is 0xe0a10000, get_gpio_vbase
+[    0.256581] <1> (1)[1:swapper/0][GPIO] Registering GPIO device
+[    0.257629] <1> (1)[1:swapper/0][CMDQ][CMDQ] platform_dev: dev: dae60410, PA: 10217000, VA: e0a90000, irqId: 183,  irqSecId:180
+[    0.257867] <1> (1)[1:swapper/0][CMDQ]DEV: VA(mediatek,mmsys_config): 0xe0a92000
+[    0.258081] <1> (1)[1:swapper/0][CMDQ]DEV: VA(mediatek,mdp_rdma): 0xe0a94000
+[    0.258286] <1> (1)[1:swapper/0][CMDQ]DEV: VA(mediatek,mdp_rsz0): 0xe0a96000
+[    0.258491] <1> (1)[1:swapper/0][CMDQ]DEV: VA(mediatek,mdp_rsz1): 0xe0a98000
+[    0.258697] <1> (1)[1:swapper/0][CMDQ]DEV: VA(mediatek,mdp_wdma): 0xe0a9a000
+[    0.258902] <1> (1)[1:swapper/0][CMDQ]DEV: VA(mediatek,mdp_wrot): 0xe0a9c000
+[    0.259112] <1> (1)[1:swapper/0][CMDQ]DEV: VA(mediatek,mdp_tdshp): 0xe0a9e000
+[    0.259341] <1> (1)[1:swapper/0][CMDQ]DEV: VA(mediatek,VENC): 0xe0ab2000
+[    0.263666] <1> (1)[1:swapper/0][ccci0/util]META MD setting not found [0][0]
+[    0.263691] <1> (1)[1:swapper/0][ccci0/util]FO:MTK_ENABLE_MD1 -> 00000001
+[    0.263706] <1> (1)[1:swapper/0][ccci0/util]FO:MTK_MD1_SUPPORT -> 00000006
+[    0.263796] <1> (1)[1:swapper/0][ccci0/util]FO:MTK_ENABLE_MD2 -> 00000000
+[    0.263811] <1> (1)[1:swapper/0][ccci0/util]FO:MTK_ENABLE_MD3 -> 00000000
+[    0.263826] <1> (1)[1:swapper/0][ccci0/util]FO:MTK_ENABLE_MD4 not found
+[    0.263842] <1> (1)[1:swapper/0][ccci0/util]FO:MTK_ENABLE_MD5 -> 00000000
+[    0.263939] <1> (1)[1:swapper/0][ccci0/cor]ccci core init
+[    0.264406] <1> (1)[1:swapper/0][ccci0/bfm]MTU=3456/1500, pool size 256/256/64/576
+[    0.266891] <1> (1)[1:swapper/0][ccci0/plat]infra_ao_base:0xe0bc8000
+[    0.266992] <1> (1)[1:swapper/0][ccci0/plat]dbgapb_base:0xe0bca000
+[    0.267121] <1> (1)[1:swapper/0][ccci0/rpc]MD1_SIM3_HOT_PLUG_EINT: node 2 no found
+[    0.267173] <1> (1)[1:swapper/0][ccci0/rpc]MD1_SIM4_HOT_PLUG_EINT: node 3 no found
+[    0.267187] <1> (1)[1:swapper/0][ccci0/rpc]node 4 is NULL
+[    0.267226] <1> (1)[1:swapper/0][CONN-MD-DFT][I]conn_md_init:init message queue list succeed
+[    0.267241] <1> (1)[1:swapper/0][CONN-MD-DFT][I]conn_md_init:init active queue list succeed
+[    0.267256] <1> (1)[1:swapper/0][CONN-MD-DFT][I]conn_md_init:init user information list succeed
+[    0.267349] <1> (1)[1:swapper/0][CONN_MD_DMP][I]conn_md_dmp_init:alloc memory for msg log system done, size:0x00000320
+[    0.267366] <1> (1)[1:swapper/0][CONN-MD-DFT][I]conn_md_init:conn_md_dmp_init succeed
+[    0.267486] <1> (1)[1:swapper/0][CONN-MD-DFT][I]conn_md_init:create conn_md_thread succeed, wakeup it
+[    0.267995] <1> (1)[1:swapper/0]SCSI subsystem initialized
+[    0.268181] <1> (1)[1:swapper/0]usbcore: registered new interface driver usbfs
+[    0.268262] <1> (1)[1:swapper/0]usbcore: registered new interface driver hub
+[    0.268403] <1> (1)[1:swapper/0]usbcore: registered new device driver usb
+[    0.269596] <1> (1)[1:swapper/0]Advanced Linux Sound Architecture Driver Initialized.
+[    0.270309] <1> (1)[1:swapper/0][cpu_ntf] <00>c0740004 (dev_cpu_callback)
+[    0.270805] <1> (1)[1:swapper/0]------------[ cut here ]------------
+[    0.270827] <1> (1)[1:swapper/0]WARNING: CPU: 1 PID: 1 at net/wireless/reg.c:511 regulatory_init+0x7c/0x114()
+[    0.270839] db.txt is empty, you should update it...
+[    0.270858] <1> (1)[1:swapper/0]CPU: 1 PID: 1 Comm: swapper/0 Not tainted 3.18.19+ #9
+[    0.270870] Backtrace: 
+[    0.270898] <1> (1)[1:swapper/0][<c0012e58>] (dump_backtrace) from [<c0012fec>] (show_stack+0x18/0x1c)
+[    0.270909]  r6:c0bc7b84 r5:ffffffff r4:00000000 r3:00200040
+[    0.270949] <1> (1)[1:swapper/0][<c0012fd4>] (show_stack) from [<c08b1778>] (dump_stack+0x78/0xc4)
+[    0.270969] <1> (1)[1:swapper/0][<c08b1700>] (dump_stack) from [<c0026dcc>] (warn_slowpath_common+0x6c/0x90)
+[    0.270980]  r5:00000009 r4:dac39e68
+[    0.271008] <1> (1)[1:swapper/0][<c0026d60>] (warn_slowpath_common) from [<c0026e5c>] (warn_slowpath_fmt+0x38/0x40)
+[    0.271018]  r8:dac38028 r7:c0c2da18 r6:c0c19758 r5:c0ce90d7 r4:c0f57924
+[    0.271060] <1> (1)[1:swapper/0][<c0026e28>] (warn_slowpath_fmt) from [<c0c198b4>] (regulatory_init+0x7c/0x114)
+[    0.271071]  r3:00000000 r2:c0bc7f67
+[    0.271097] <1> (1)[1:swapper/0][<c0c19838>] (regulatory_init) from [<c0c197b8>] (cfg80211_init+0x60/0xe0)
+[    0.271108]  r5:c0f57910 r4:00000000
+[    0.271137] <1> (1)[1:swapper/0][<c0c19758>] (cfg80211_init) from [<c0bd0e20>] (do_one_initcall+0x114/0x1c0)
+[    0.271148]  r5:c0c2da18 r4:da5e1d00
+[    0.271176] <1> (1)[1:swapper/0][<c0bd0d0c>] (do_one_initcall) from [<c0bd0fdc>] (kernel_init_freeable+0x110/0x1d8)
+[    0.271187]  r9:00000134 r8:c0d3d000 r7:c0d3d000 r6:c0c37880 r5:c0c2e238 r4:00000004
+[    0.271232] <1> (1)[1:swapper/0][<c0bd0ecc>] (kernel_init_freeable) from [<c08ab8fc>] (kernel_init+0x10/0xf8)
+[    0.271243]  r9:00000000 r8:00000000 r7:00000000 r6:00000000 r5:c08ab8ec r4:00000000
+[    0.271286] <1> (1)[1:swapper/0][<c08ab8ec>] (kernel_init) from [<c000e9a0>] (ret_from_fork+0x14/0x34)
+[    0.271297]  r4:00000000 r3:dac38000
+[    0.271363] <1> (1)[1:swapper/0]---[ end trace 3b11ef81fbd5b42f ]---
+[    0.271567] <1> (1)[13:kworker/1:0]cfg80211: Calling CRDA to update world regulatory domain
+[    0.272493] <2> (2)[1:swapper/0]Switched to clocksource mt6735-gpt
+[    0.318268] <2> (2)[1:swapper/0] pimix=184
+[    0.319748] <0> (0)[53:pmic_thread][PWRAP] clear EINT flag mt_pmic_wrap_eint_status=0x0
+[    0.320791] <0>-(0)[53:pmic_thread]------------[ cut here ]------------
+[    0.320817] <0>-(0)[53:pmic_thread]WARNING: CPU: 0 PID: 53 at kernel/irq/manage.c:454 __enable_irq+0x40/0x84()
+[    0.320830] <0>-(0)[53:pmic_thread]Unbalanced enable for IRQ 494
+[    0.320848] <0>-(0)[53:pmic_thread]CPU: 0 PID: 53 Comm: pmic_thread Tainted: G        W      3.18.19+ #9
+[    0.320859] Backtrace: 
+[    0.320889] <0>-(0)[53:pmic_thread][<c0012e58>] (dump_backtrace) from [<c0012fec>] (show_stack+0x18/0x1c)
+[    0.320900]  r6:c0a4ccb3 r5:ffffffff r4:00000000 r3:00208140
+[    0.320939] <0>-(0)[53:pmic_thread][<c0012fd4>] (show_stack) from [<c08b1778>] (dump_stack+0x78/0xc4)
+[    0.320960] <0>-(0)[53:pmic_thread][<c08b1700>] (dump_stack) from [<c0026dcc>] (warn_slowpath_common+0x6c/0x90)
+[    0.320971]  r5:00000009 r4:da63bec8
+[    0.320998] <0>-(0)[53:pmic_thread][<c0026d60>] (warn_slowpath_common) from [<c0026e5c>] (warn_slowpath_fmt+0x38/0x40)
+[    0.321008]  r8:00000001 r7:c0c7e22c r6:c0914274 r5:000001ee r4:c0c58380
+[    0.321052] <0>-(0)[53:pmic_thread][<c0026e28>] (warn_slowpath_fmt) from [<c00766c0>] (__enable_irq+0x40/0x84)
+[    0.321063]  r3:000001ee r2:c0a4cda8
+[    0.321092] <0>-(0)[53:pmic_thread][<c0076680>] (__enable_irq) from [<c007676c>] (enable_irq+0x68/0x7c)
+[    0.321104] <0> (2)[1:swapper/0]vaud28: 2800 mV 
+[    0.321114]  r5:c0c58380 r4:000001ee
+[    0.321145] <0>-(0)[53:pmic_thread][<c0076704>] (enable_irq) from [<c031ddb8>] (pmic_thread_kthread+0x154/0x178)
+[    0.321156]  r5:000002c8 r4:00000010
+[    0.321186] <0>-(0)[53:pmic_thread][<c031dc64>] (pmic_thread_kthread) from [<c003f168>] (kthread+0xf0/0x104)
+[    0.321196]  r10:00000000 r9:00000000 r8:00000000 r7:c031dc64 r6:00000000 r5:00000000
+[    0.321230]  r4:da630c80
+[    0.321254] <0>-(0)[53:pmic_thread][<c003f078>] (kthread) from [<c000e9a0>] (ret_from_fork+0x14/0x34)
+[    0.321264]  r7:00000000 r6:00000000 r5:c003f078 r4:da630c80
+[    0.321295] <0>-(0)[53:pmic_thread]---[ end trace 3b11ef81fbd5b430 ]---
+[    0.321339] <2> (2)[1:swapper/0]vcn28: 2800 mV 
+[    0.321580] <2> (2)[1:swapper/0]vcama: 1500 <--> 2800 mV at 2800 mV 
+[    0.321810] <2> (2)[1:swapper/0]vcn33_bt: 3300 <--> 3600 mV at 3300 mV 
+[    0.322037] <2> (2)[1:swapper/0]vcn33_wifi: 3300 <--> 3600 mV at 3300 mV 
+[    0.322658] <2> (2)[1:swapper/0]vusb33: 3300 mV 
+[    0.323285] <2> (2)[1:swapper/0]vemc_3v3: 1800 <--> 3300 mV at 3000 mV 
+[    0.323706] <2> (2)[1:swapper/0]vmch: 2900 <--> 3300 mV at 2900 mV 
+[    0.324122] <2> (2)[1:swapper/0]vmc: 1800 <--> 3300 mV at 2900 mV 
+[    0.324351] <2> (2)[1:swapper/0]vcamaf: 1200 <--> 3300 mV at 2800 mV 
+[    0.324580] <2> (2)[1:swapper/0]vgp1: 1200 <--> 3300 mV at 2800 mV 
+[    0.324812] <2> (2)[1:swapper/0]vibr: 1200 <--> 3300 mV at 2800 mV 
+[    0.325044] <2> (2)[1:swapper/0]vcamd: 900 <--> 1500 mV at 1300 mV 
+[    0.325264] <2> (2)[1:swapper/0]vcn18: 1800 mV 
+[    0.325473] <2> (2)[1:swapper/0]vcamio: 1200 <--> 1800 mV at 1800 mV 
+[    0.326078] <2> (2)[1:swapper/0]vsram: 700 <--> 1493 mV at 1350 mV 
+[    0.326706] <2> (2)[1:swapper/0]vm: 1240 <--> 1540 mV at 1240 mV 
+[    0.326953] <2> (2)[1:swapper/0]Reg[0xec2]=0x8a12, Reg[0xec4]=0xb9a1, Reg[0x2ac]=0x8f
+[    0.326969] <2> (2)[1:swapper/0][low_battery_protect_init] 3400 mV, 3250 mV, 3000 mV
+[    0.327040] <2> (2)[1:swapper/0]Reg[0xcd2]=0xd81a, Reg[0xcd4]=0xd10f, Reg[0x2b8]=0x840
+[    0.327054] <2> (2)[1:swapper/0][battery_oc_protect_init] 3400 mA, 4000 mA
+[    0.327204] <2> (2)[1:swapper/0]Create bat_percent_notify_thread : done
+[    0.327315] <2> (2)[1:swapper/0]Create dlpt_notify_thread : done
+[    0.327356] <2> (2)[1:swapper/0]POWER_UVLO_VOLT_LEVEL=2600, [0xf6a]=0x2
+[    0.329882] <2> (2)[1:swapper/0][MUSB]mt_usb_dts_probe 1388: first_connect, check_delay_done to 0
+[    0.330529] <2> (2)[1:swapper/0][MUSB]mt_usb_probe 1366: USB probe done!
+[    0.331003] <2> (2)[1:swapper/0]musb-hdrc: version 6.0, ?dma?, otg (peripheral+host)
+[    0.331660] <2> (2)[1:swapper/0]musb probe
+[    0.331676] <2> (2)[1:swapper/0][MUSB]musb_probe 2385: musb_removed to 0
+[    0.331689] <2> (2)[1:swapper/0][MUSB]musb_probe 2388: dts node from dts_np
+[    0.331778] <2> (2)[1:swapper/0]musb probe reg: 0xe0c00000 ,0xe0c20000 , irq: 0x104
+[    0.331888] <2> (2)[1:swapper/0][MUSB]mt_usb_init 1140: mt_usb_init
+[    0.332060] <2> (2)[1:swapper/0]usb_phy_generic.1.auto supply vcc not found, using dummy regulator
+[    0.332238] <2> (2)[1:swapper/0][MUSB]mt_usb_init 1184: regulator set vol ok, <3300000,3300000>
+[    0.332263] <2> (2)[1:swapper/0][MUSB]mt_usb_init 1190: enable USB regulator
+[    0.332398] <2> (2)[1:swapper/0][MUSB]mt_usb_init 1202: musb platform init ff00
+[    0.332472] <2> (2)[1:swapper/0][MUSB]usb_cable_connected 590: type(0)
+[    0.333067] <2>-(2)[1:swapper/0][GPIO]   482: modebefore1 set pin[0],addr=300,(e0a10000,e0a10300)
+[    0.333086] <2>-(2)[1:swapper/0][GPIO]   513: mt_set_gpio_mode_base:pin:0, mode:1, value:0x4a000001
+[    0.333140] <3>-(3)[0:swapper/3][MUSB]mt_usb_ext_iddig_int 431: id pin interrupt assert
+[    0.333390] <2> (2)[1:swapper/0][MUSB]mt_usb_enable 292: <0,0>,<1,0,0,0>
+[    0.344425] <2> (2)[1:swapper/0][MUSB]HQA_special 22: HQA, 0x18, before:88
+[    0.344443] <2> (2)[1:swapper/0][MUSB]HQA_special 26: HQA, 0x18, after:86
+[    0.344473] <2> (2)[1:swapper/0][MUSB]hs_slew_rate_cal 269: [USBPHY]slew calibration:FM_OUT =319,x=4314,value=4
+[    0.344491] <2> (2)[1:swapper/0][MUSB]usb_phy_recover 642: usb recovery success
+[    0.344506] <2> (2)[1:swapper/0][MUSB]mt_usb_enable 328: <1,0,1,0>
+[    0.344764] <2> (2)[1:swapper/0][MUSB]mt_usb_disable 340: <1,1>,<1,1,1,0>
+[    0.345604] <2> (2)[1:swapper/0][MUSB]usb_phy_savecurrent 534: usb save current success
+[    0.345619] <2> (2)[1:swapper/0][MUSB]mt_usb_disable 358: <1,1,1,1>
+[    0.345756] <2> (2)[1:swapper/0][MUSB]musb_core_init 1705: musb-hdrc: ConfigData=0x1f (UTMI-16, dyn FIFOs, HB-ISO Rx, HB-ISO Tx, SoftConn)
+[    0.345834] <2> (2)[1:swapper/0][MUSB]fifo_setup 1410: Tx ep 1 fifo size is 512 fifo address is 8
+[    0.345851] <2> (2)[1:swapper/0][MUSB]fifo_setup 1420: Rx ep 1 fifo size is 512 fifo address is 48
+[    0.345866] <2> (2)[1:swapper/0][MUSB]fifo_setup 1410: Tx ep 2 fifo size is 512 fifo address is 88
+[    0.345882] <2> (2)[1:swapper/0][MUSB]fifo_setup 1420: Rx ep 2 fifo size is 512 fifo address is c8
+[    0.345897] <2> (2)[1:swapper/0][MUSB]fifo_setup 1410: Tx ep 3 fifo size is 512 fifo address is 108
+[    0.345912] <2> (2)[1:swapper/0][MUSB]fifo_setup 1420: Rx ep 3 fifo size is 512 fifo address is 148
+[    0.345928] <2> (2)[1:swapper/0][MUSB]fifo_setup 1410: Tx ep 4 fifo size is 512 fifo address is 188
+[    0.345943] <2> (2)[1:swapper/0][MUSB]fifo_setup 1420: Rx ep 4 fifo size is 512 fifo address is 1c8
+[    0.345959] <2> (2)[1:swapper/0][MUSB]fifo_setup 1410: Tx ep 5 fifo size is 512 fifo address is 208
+[    0.345974] <2> (2)[1:swapper/0][MUSB]fifo_setup 1420: Rx ep 5 fifo size is 512 fifo address is 248
+[    0.345990] <2> (2)[1:swapper/0][MUSB]fifo_setup 1410: Tx ep 6 fifo size is 512 fifo address is 288
+[    0.346005] <2> (2)[1:swapper/0][MUSB]fifo_setup 1420: Rx ep 6 fifo size is 512 fifo address is 2c8
+[    0.346020] <2> (2)[1:swapper/0][MUSB]fifo_setup 1410: Tx ep 7 fifo size is 512 fifo address is 308
+[    0.346035] <2> (2)[1:swapper/0][MUSB]fifo_setup 1420: Rx ep 7 fifo size is 512 fifo address is 348
+[    0.346051] <2> (2)[1:swapper/0][MUSB]fifo_setup 1410: Tx ep 8 fifo size is 512 fifo address is 388
+[    0.346066] <2> (2)[1:swapper/0][MUSB]fifo_setup 1420: Rx ep 8 fifo size is 512 fifo address is 3c8
+[    0.346080] <2> (2)[1:swapper/0][MUSB]musb_core_init 1735: ep_config_from_table 0
+[    0.346096] <2> (2)[1:swapper/0][MUSB]musb_core_init 1761: musb-hdrc: hw_ep 0shared, max 64
+[    0.346112] <2> (2)[1:swapper/0][MUSB]musb_core_init 1761: musb-hdrc: hw_ep 1tx, max 512
+[    0.346127] <2> (2)[1:swapper/0][MUSB]musb_core_init 1769: musb-hdrc: hw_ep 1rx, max 512
+[    0.346143] <2> (2)[1:swapper/0][MUSB]musb_core_init 1761: musb-hdrc: hw_ep 2tx, max 512
+[    0.346158] <2> (2)[1:swapper/0][MUSB]musb_core_init 1769: musb-hdrc: hw_ep 2rx, max 512
+[    0.346174] <2> (2)[1:swapper/0][MUSB]musb_core_init 1761: musb-hdrc: hw_ep 3tx, max 512
+[    0.346189] <2> (2)[1:swapper/0][MUSB]musb_core_init 1769: musb-hdrc: hw_ep 3rx, max 512
+[    0.346204] <2> (2)[1:swapper/0][MUSB]musb_core_init 1761: musb-hdrc: hw_ep 4tx, max 512
+[    0.346220] <2> (2)[1:swapper/0][MUSB]musb_core_init 1769: musb-hdrc: hw_ep 4rx, max 512
+[    0.346235] <2> (2)[1:swapper/0][MUSB]musb_core_init 1761: musb-hdrc: hw_ep 5tx, max 512
+[    0.346250] <2> (2)[1:swapper/0][MUSB]musb_core_init 1769: musb-hdrc: hw_ep 5rx, max 512
+[    0.346266] <2> (2)[1:swapper/0][MUSB]musb_core_init 1761: musb-hdrc: hw_ep 6tx, max 512
+[    0.346281] <2> (2)[1:swapper/0][MUSB]musb_core_init 1769: musb-hdrc: hw_ep 6rx, max 512
+[    0.346297] <2> (2)[1:swapper/0][MUSB]musb_core_init 1761: musb-hdrc: hw_ep 7tx, max 512
+[    0.346312] <2> (2)[1:swapper/0][MUSB]musb_core_init 1769: musb-hdrc: hw_ep 7rx, max 512
+[    0.346328] <2> (2)[1:swapper/0][MUSB]musb_core_init 1761: musb-hdrc: hw_ep 8tx, max 512
+[    0.346344] <2> (2)[1:swapper/0][MUSB]musb_core_init 1769: musb-hdrc: hw_ep 8rx, max 512
+[    0.346357] <2> (2)[1:swapper/0][MUSB]musb_core_init 1774: musb_core_init end
+[    0.346401] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 0 name is ep0
+[    0.346417] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 1 name is ep1in
+[    0.346433] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 1 name is ep1out
+[    0.346448] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 2 name is ep2in
+[    0.346464] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 2 name is ep2out
+[    0.346479] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 3 name is ep3in
+[    0.346495] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 3 name is ep3out
+[    0.346510] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 4 name is ep4in
+[    0.346526] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 4 name is ep4out
+[    0.346541] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 5 name is ep5in
+[    0.346556] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 5 name is ep5out
+[    0.346572] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 6 name is ep6in
+[    0.346587] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 6 name is ep6out
+[    0.346602] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 7 name is ep7in
+[    0.346617] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 7 name is ep7out
+[    0.346633] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 8 name is ep8in
+[    0.346648] <2> (2)[1:swapper/0][MUSB]init_peripheral_ep 2642: EP 8 name is ep8out
+[    0.346855] <2> (2)[1:swapper/0][MUSB]mt_usb_disable 340: <0,0>,<1,2,1,1>
+[    0.346920] <2> (2)[1:swapper/0]musb core probe done base 0xe0c20000
+[    0.347328] <2> (2)[1:swapper/0][ION]ion_init()
+[    0.347826] <2> (2)[1:swapper/0][ION]ion_drv_probe() heap_nr=3
+[    0.348001] <2> (2)[1:swapper/0][ION]ion_drv_create_heap: create heap: ion_system_contig_heap
+[    0.348196] <2> (2)[1:swapper/0][ION]ion_drv_create_heap: create heap: ion_mm_heap
+[    0.348225] <2> (2)[1:swapper/0]MMP: MMProfileEnable(): enable: 1
+[    0.349455] <2> (2)[1:swapper/0]TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.349521] <2> (2)[1:swapper/0]TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.349605] <2> (2)[1:swapper/0]TCP: Hash tables configured (established 4096 bind 4096)
+[    0.349681] <2> (2)[1:swapper/0]TCP: reno registered
+[    0.349700] <2> (2)[1:swapper/0]UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.349731] <2> (2)[1:swapper/0]UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.350329] <2> (2)[1:swapper/0]Unpacking initramfs...
+[    0.352533] <2> (2)[1:swapper/0][MUSB]musb_do_idle 248: otg_state b_idle
+[    0.434959] <1> (1)[1:swapper/0]Freeing initrd memory: 1348K (c4000000 - c4151000)
+[    0.435761] <1> (1)[1:swapper/0][cpu_ntf] <00>c0018e08 (cpu_pmu_notify)
+[    0.440200] <1> (1)[1:swapper/0]futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.440284] <1> (1)[1:swapper/0]audit: initializing netlink subsys (disabled)
+[    0.440366] <1> (1)[1:swapper/0]audit: type=2000 audit(0.430:1): initialized
+[    0.440965] <1> (1)[1:swapper/0][cpu_ntf] <00>c00e1700 (cpu_callback)
+[    0.451675] <1> (1)[1:swapper/0]fuse init (API version 7.23)
+[    0.455305] <2> (2)[1:swapper/0]io scheduler noop registered
+[    0.455334] <2> (2)[1:swapper/0]io scheduler deadline registered
+[    0.455395] <2> (2)[1:swapper/0]io scheduler cfq registered (default)
+[    0.455464] <2> (2)[1:swapper/0][cpu_ntf] <00>c02672bc (percpu_counter_hotcpu_callback)
+[    0.462135] <2> (2)[1:swapper/0]loop: module loaded
+[    0.462841] <2> (2)[1:swapper/0]zram: Created 1 device(s) ...
+[    0.463977] <2> (2)[1:swapper/0][register_dlpt_notify] prio_val=0
+[    0.464141] <2> (2)[1:swapper/0][PBM] pbm_module_init : Done
+[    0.464184] <2> (2)[1:swapper/0][VcoreFS] OPP 0: vcore_uv = 1150000, ddr_khz = 1066000
+[    0.464199] <2> (2)[1:swapper/0][VcoreFS] OPP 1: vcore_uv = 1050000, ddr_khz = 1066000
+[    0.464213] <2> (2)[1:swapper/0][VcoreFS] OPP 2: vcore_uv = 1050000, ddr_khz = 800000
+[    0.464243] <2> (2)[1:swapper/0][VcoreFS] UHPM  : 1150000 (0x58)
+[    0.464257] <2> (2)[1:swapper/0][VcoreFS] TRANS4: 1116666 (0x53)
+[    0.464270] <2> (2)[1:swapper/0][VcoreFS] TRANS3: 1083333 (0x4e)
+[    0.464283] <2> (2)[1:swapper/0][VcoreFS] HPM   : 1050000 (0x48)
+[    0.464297] <2> (2)[1:swapper/0][VcoreFS] TRANS2: 1050000 (0x48)
+[    0.464310] <2> (2)[1:swapper/0][VcoreFS] TRANS1: 1050000 (0x48)
+[    0.464323] <2> (2)[1:swapper/0][VcoreFS] LPM   : 1050000 (0x48)
+[    0.465216] <2> (2)[1:swapper/0][register_low_battery_notify] prio_val=2
+[    0.465232] <2> (2)[1:swapper/0][register_battery_percent_notify] prio_val=2
+[    0.465291] <2> (2)[1:swapper/0][HPS] hps_init
+[    0.465304] <2> (2)[1:swapper/0][HPS] hps_cpu_init
+[    0.465320] <2> (2)[1:swapper/0][HPS] hps_ctxt.little_cpumask: 0-3
+[    0.465333] <2> (2)[1:swapper/0][HPS] hps_ctxt.big_cpumask: 
+[    0.465350] <2> (2)[1:swapper/0][HPS] hps_cpu_init: little_cpu_id_min: 0, little_cpu_id_max: 3, big_cpu_id_min: 0, big_cpu_id_max: 0
+[    0.465363] <2> (2)[1:swapper/0][HPS] hps_core_init
+[    0.465477] <2> (2)[1:swapper/0][HPS] hps_task_start success, ptr: da6b4600, pid: 91
+[    0.465493] <0> (0)[91:hps_main][HPS] hps_ctxt.init_state: 0
+[    0.465497] <0> (2)[1:swapper/0][HPS] hps_procfs_init
+[    0.465518] <0> (0)[91:hps_main][HPS] hps_ctxt.state: 0
+[    0.465531] <0> (0)[91:hps_main][HPS] hps_ctxt.enabled: 1
+[    0.465544] <0> (0)[91:hps_main][HPS] hps_ctxt.suspend_enabled: 1
+[    0.465556] <0> (0)[91:hps_main][HPS] hps_ctxt.is_hmp: 0
+[    0.465570] <0> (0)[91:hps_main][HPS] hps_ctxt.little_cpu_id_min: 0
+[    0.465583] <0> (0)[91:hps_main][HPS] hps_ctxt.little_cpu_id_max: 3
+[    0.465596] <0> (0)[91:hps_main][HPS] hps_ctxt.big_cpu_id_min: 0
+[    0.465608] <0> (0)[91:hps_main][HPS] hps_ctxt.big_cpu_id_max: 0
+[    0.466106] <2> (2)[1:swapper/0][HPS] hps_probe
+[    0.466328] <2> (2)[1:swapper/0]MT_SCHED: Init complete, device major number = 249
+[    0.466366] <2> (2)[1:swapper/0][cpu_ntf] <00>c02e11e8 (sched_cpu_notify)
+[    0.466732] <2> (2)[1:swapper/0]11002000.apuart0: ttyMT0 at MMIO 0x11002000 (irq = 123, base_baud = 1625000) is a MTK UART
+[    0.467037] <2> (2)[1:swapper/0][UART 0] create
+[    0.467051] <2> (2)[1:swapper/0][UART 0] idx= 0
+[    0.467079] <2> (2)[1:swapper/0][ 0] e0836000 (1024) ;
+[    0.467092] <2> (2)[1:swapper/0][UART 0] idx= 1
+[    0.467117] <2> (2)[1:swapper/0][ 1] e0837000 (1024) ;
+[    0.467129] <2> (2)[1:swapper/0]
+[    0.467200] <2> (2)[1:swapper/0]11003000.apuart1: ttyMT1 at MMIO 0x11003000 (irq = 124, base_baud = 1625000) is a MTK UART
+[    0.467487] <2> (2)[1:swapper/0][UART 1] create
+[    0.467500] <2> (2)[1:swapper/0][UART 1] idx= 2
+[    0.467547] <2> (2)[1:swapper/0][ 2] e0838000 (8192) ;
+[    0.467561] <2> (2)[1:swapper/0][UART 1] idx= 3
+[    0.467606] <2> (2)[1:swapper/0][ 3] e083a000 (8192) ;
+[    0.467618] <2> (2)[1:swapper/0]
+[    0.467695] <2> (2)[1:swapper/0]11004000.apuart2: ttyMT2 at MMIO 0x11004000 (irq = 125, base_baud = 1625000) is a MTK UART
+[    0.467984] <2> (2)[1:swapper/0][UART 2] create
+[    0.467998] <2> (2)[1:swapper/0][UART 2] idx= 4
+[    0.468047] <2> (2)[1:swapper/0][ 4] e083c000 (8192) ;
+[    0.468060] <2> (2)[1:swapper/0][UART 2] idx= 5
+[    0.468106] <2> (2)[1:swapper/0][ 5] e083e000 (8192) ;
+[    0.468119] <2> (2)[1:swapper/0]
+[    0.468189] <2> (2)[1:swapper/0]11005000.apuart3: ttyMT3 at MMIO 0x11005000 (irq = 126, base_baud = 1625000) is a MTK UART
+[    0.468481] <2> (2)[1:swapper/0][UART 3] not support VFF, Cancel alloc
+[    0.472514] <2> (2)[1:swapper/0][MT AUXADC_probe3] get device tree info : start !!
+[    0.472634] <2> (2)[1:swapper/0][AUXADC_AP] find node TEMPERATURE:0
+[    0.472649] <2> (2)[1:swapper/0][AUXADC_AP] find node TEMPERATURE1:1
+[    0.472664] <2> (2)[1:swapper/0][AUXADC_AP] find node ADC_FDD_RF_PARAMS_DYNAMIC_CUSTOM_CH:12
+[    0.472685] <2> (2)[1:swapper/0][MT AUXADC_AP] adc_channel_info_init : done !!
+[    0.472987] <2> (2)[1:swapper/0]mt-auxadc: probe of 11001000.adc_hw failed with error -22
+[    0.474843] <2> (2)[1:swapper/0]swf559line=2930,func=ltr559_init: .
+[    0.475130] <2> (2)[1:swapper/0]<ALS/PS> alsps_driver_add
+[    0.475144] <2> (2)[1:swapper/0]<ALS/PS> register alsps driver for the first time
+[    0.475841] <2> (2)[1:swapper/0]<ALS/PS> als_ps_probe
+[    0.476944] <2> (2)[1:swapper/0]BOOTPROF:       476.935692: ON
+[    0.476989] <2> (2)[1:swapper/0] mt_i2c_init  driver us DT
+[    0.477127] <2> (2)[1:swapper/0] mt_i2c_init driver us platform device
+[    0.477586] <2> (2)[1:swapper/0] mt_i2c_probe+++++++++++++++++
+[    0.477651] <2> (2)[1:swapper/0]reg: 0xe0c3c000, irq: 0x116, id: 0
+[    0.477745] <2> (2)[1:swapper/0] id: 0, reg: 0xe0c3c000, dma_reg: 0xe0c3a180, irq: 116
+[    0.477789] <2> (2)[1:swapper/0]i2c-bus0 speed is 100Khz
+[    0.478228] i2c-0: base(0xe0c3c000),dmabase(0xe0c3a180),irq(0x116)
+[    0.478243] <2> (2)[1:swapper/0] mt_i2c_probe ok------------------
+[    0.478306] <2> (2)[1:swapper/0] mt_i2c_probe+++++++++++++++++
+[    0.478370] <2> (2)[1:swapper/0]reg: 0xe0c40000, irq: 0x117, id: 1
+[    0.478437] <2> (2)[1:swapper/0] id: 1, reg: 0xe0c40000, dma_reg: 0xe0c3a200, irq: 117
+[    0.478470] <2> (2)[1:swapper/0]i2c-bus1 speed is 100Khz
+[    0.478874] i2c-1: base(0xe0c40000),dmabase(0xe0c3a200),irq(0x117)
+[    0.478888] <2> (2)[1:swapper/0] mt_i2c_probe ok------------------
+[    0.478939] <2> (2)[1:swapper/0] mt_i2c_probe+++++++++++++++++
+[    0.478992] <2> (2)[1:swapper/0]reg: 0xe0c44000, irq: 0x118, id: 2
+[    0.479048] <2> (2)[1:swapper/0] id: 2, reg: 0xe0c44000, dma_reg: 0xe0c3a280, irq: 118
+[    0.479080] <2> (2)[1:swapper/0]i2c-bus2 speed is 100Khz
+[    0.479858] <2> (2)[1:swapper/0][mt6605]mt6605_probe : EINT IRQ LINE NOT AVAILABLE
+[    0.479974] i2c-2: base(0xe0c44000),dmabase(0xe0c3a280),irq(0x118)
+[    0.479987] <2> (2)[1:swapper/0] mt_i2c_probe ok------------------
+[    0.480040] <2> (2)[1:swapper/0] mt_i2c_probe+++++++++++++++++
+[    0.480098] <2> (2)[1:swapper/0]reg: 0xe0c4c000, irq: 0x119, id: 3
+[    0.480157] <2> (2)[1:swapper/0] id: 3, reg: 0xe0c4c000, dma_reg: 0xe0c3a300, irq: 119
+[    0.480190] <2> (2)[1:swapper/0]i2c-bus3 speed is 100Khz
+[    0.480390] i2c-3: base(0xe0c4c000),dmabase(0xe0c3a300),irq(0x119)
+[    0.480404] <2> (2)[1:swapper/0] mt_i2c_probe ok------------------
+[    0.481039] <2> (2)[1:swapper/0]i2c_common device init
+[    0.481510] <2> (2)[1:swapper/0]i2c_common device probe
+[    0.484847] <2> (2)[1:swapper/0][Accdet]accdet_mod_init begin!
+[    0.485671] <2> (2)[1:swapper/0][Accdet]accdet_probe begin!
+[    0.486123] <2> (2)[1:swapper/0]input: ACCDET as /devices/virtual/input/input0
+[    0.486328] <2> (2)[1:swapper/0][Accdet]accdet_probe : ACCDET_INIT
+[    0.486553] [ACCDET]Start accdet_get_dts_data
+[    0.487433] <2> (2)[1:swapper/0][Accdet]mid-Key = 80, up_key = 220, down_key = 500
+[    0.487453] <2> (2)[1:swapper/0][Accdet]pwm_width = 500, pwm_thresh = 200
+[    0.487453] <2> deb0 = 800, deb1 = 800, mic_mode = 1
+[    0.489104] <2> (2)[1:swapper/0] efusevalue = 0xffffe900, accdet_auxadc_offset = -11
+[    0.489125] <2> (2)[1:swapper/0][Accdet]accdet_probe done!
+[    0.490004] <2> (2)[1:swapper/0][Accdet]platform_driver_register done!
+[    0.490018] <2> (2)[1:swapper/0][Accdet]accdet_mod_init done!
+[    0.492393] mtk_rtc_common: rtc_init
+[    0.494040] <2> (2)[1:swapper/0]mtk_rtc_common: read al time = 2017/02/03 20:01:50 (1)
+[    0.495055] <2> (2)[1:swapper/0]mt-rtc mt-rtc: rtc core: registered mt-rtc as rtc0
+[    2.492535] <2> (2)[1:swapper/0]ERROR,498: id=3,addr: 6b, transfer timeout
+[    2.492551] <2> (2)[1:swapper/0]I2C(3) dump info++++++++++++++++++++++
+[    2.492574] <2> (2)[1:swapper/0]I2C structure:
+[    2.492574] <2>[I2C]Clk=13600,Id=3,Speed mode=2,St_rs=0,Dma_en=0,Op=3,Poll_en=0,Irq_stat=0
+[    2.492574] <2>[I2C]Trans_len=1,Trans_num=2,Trans_auxlen=1,Data_size=ffff,speed=3400
+[    2.492574] <2>[I2C]Trans_stop=0,Trans_comp=0,Trans_error=0
+[    2.492600] <2> (2)[1:swapper/0]base address 0xe0c4c000
+[    2.492627] <2> (2)[1:swapper/0]I2C register:
+[    2.492627] <2>[I2C]SLAVE_ADDR=d6,INTR_MASK=ff,INTR_STAT=0,CONTROL=3a,TRANSFER_LEN=1
+[    2.492627] <2>[I2C]TRANSAC_LEN=2,DELAY_LEN=2,TIMING=1010,START=1,FIFO_STAT=110
+[    2.492627] <2>[I2C]IO_CONFIG=0,HS=103,DCM_EN=0,DEBUGSTAT=41,EXT_CONF=1800,TRANSFER_LEN_AUX=1
+[    2.492660] <2> (2)[1:swapper/0]before enable DMA register(0x0):
+[    2.492660] <2>[I2C]INT_FLAG=0,INT_EN=0,EN=0,RST=0,
+[    2.492660] <2>[I2C]STOP=0,FLUSH=0,CON=0,TX_MEM_ADDR=0, RX_MEM_ADDR=0
+[    2.492660] <2>[I2C]TX_LEN=0,RX_LEN=0,INT_BUF_SIZE=0,DEBUG_STATUS=0
+[    2.492696] <2> (2)[1:swapper/0]DMA register(0xe0c3a300):
+[    2.492696] <2>[I2C]INT_FLAG=0,INT_EN=0,EN=0,RST=0,
+[    2.492696] <2>[I2C]STOP=0,FLUSH=0,CON=0,TX_MEM_ADDR=0, RX_MEM_ADDR=0
+[    2.492696] <2>[I2C]TX_LEN=0,RX_LEN=0,INT_BUF_SIZE=0,DEBUG_STATUS=0
+[    2.492721] <2> (2)[1:swapper/0]I2C(3) dump info------------------------------
+[    4.492522] <2> (2)[1:swapper/0]ERROR,498: id=3,addr: 6b, transfer timeout
+[    4.492537] <2> (2)[1:swapper/0]I2C(3) dump info++++++++++++++++++++++
+[    4.492560] <2> (2)[1:swapper/0]I2C structure:
+[    4.492560] <2>[I2C]Clk=13600,Id=3,Speed mode=2,St_rs=0,Dma_en=0,Op=3,Poll_en=0,Irq_stat=0
+[    4.492560] <2>[I2C]Trans_len=1,Trans_num=2,Trans_auxlen=1,Data_size=ffff,speed=3400
+[    4.492560] <2>[I2C]Trans_stop=0,Trans_comp=0,Trans_error=0
+[    4.492586] <2> (2)[1:swapper/0]base address 0xe0c4c000
+[    4.492613] <2> (2)[1:swapper/0]I2C register:
+[    4.492613] <2>[I2C]SLAVE_ADDR=d6,INTR_MASK=ff,INTR_STAT=0,CONTROL=3a,TRANSFER_LEN=1
+[    4.492613] <2>[I2C]TRANSAC_LEN=2,DELAY_LEN=2,TIMING=1010,START=1,FIFO_STAT=110
+[    4.492613] <2>[I2C]IO_CONFIG=0,HS=103,DCM_EN=0,DEBUGSTAT=41,EXT_CONF=1800,TRANSFER_LEN_AUX=1
+[    4.492646] <2> (2)[1:swapper/0]before enable DMA register(0x0):
+[    4.492646] <2>[I2C]INT_FLAG=0,INT_EN=0,EN=0,RST=0,
+[    4.492646] <2>[I2C]STOP=0,FLUSH=0,CON=0,TX_MEM_ADDR=0, RX_MEM_ADDR=0
+[    4.492646] <2>[I2C]TX_LEN=0,RX_LEN=0,INT_BUF_SIZE=0,DEBUG_STATUS=0
+[    4.492682] <2> (2)[1:swapper/0]DMA register(0xe0c3a300):
+[    4.492682] <2>[I2C]INT_FLAG=0,INT_EN=0,EN=0,RST=0,
+[    4.492682] <2>[I2C]STOP=0,FLUSH=0,CON=0,TX_MEM_ADDR=0, RX_MEM_ADDR=0
+[    4.492682] <2>[I2C]TX_LEN=0,RX_LEN=0,INT_BUF_SIZE=0,DEBUG_STATUS=0
+[    4.492707] <2> (2)[1:swapper/0]I2C(3) dump info------------------------------
+[    5.342884] <2> (2)[58:kworker/2:1][MUSB]musb_id_pin_work 344: work start, is_host=0, boot mode(0)
+[    5.342900] <2> (2)[58:kworker/2:1][MUSB]musb_is_host 226: will mask PMIC charger detection
+[    5.342929] <2> (2)[58:kworker/2:1][MUSB]mt_usb_enable 292: <0,0>,<2,2,1,1>
+[    5.353962] <2> (2)[58:kworker/2:1][MUSB]HQA_special 22: HQA, 0x18, before:86
+[    5.353980] <2> (2)[58:kworker/2:1][MUSB]HQA_special 26: HQA, 0x18, after:86
+[    5.354009] <2> (2)[58:kworker/2:1][MUSB]hs_slew_rate_cal 269: [USBPHY]slew calibration:FM_OUT =319,x=4314,value=4
+[    5.354028] <2> (2)[58:kworker/2:1][MUSB]usb_phy_recover 642: usb recovery success
+[    5.354044] <2> (2)[58:kworker/2:1][MUSB]mt_usb_enable 328: <2,2,2,1>
+[    5.354062] <2> (2)[58:kworker/2:1][MUSB]musb_is_host 244: iddig_state = 1
+[    5.354076] <2> (2)[58:kworker/2:1][MUSB]musb_is_host 265: will unmask PMIC charger detection
+[    5.354100] <2> (2)[58:kworker/2:1][MUSB]musb_is_host 274: usb_is_host = 0
+[    5.354114] <2> (2)[58:kworker/2:1][MUSB]musb_id_pin_work 357: musb is as device
+[    5.354130] <2> (2)[58:kworker/2:1][MUSB]musb_id_pin_work 396: devctl is 98
+[    5.354145] <2> (2)[58:kworker/2:1][MUSB]mt_usb_set_vbus 85: mt65xx_usb20_vbus++,is_on=0
+[    5.354165] <2> (2)[58:kworker/2:1]Unable to handle kernel NULL pointer dereference at virtual address 00000130
+[    5.354179] <2> (2)[58:kworker/2:1]pgd = c0004000
+[    5.354190] [00000130] *pgd=00000000
+[    5.354213] <2>-(2)[58:kworker/2:1]Internal error: Oops: 5 [#1] PREEMPT SMP ARM
+[    5.354233] <2>-(2)[58:kworker/2:1]CPU: 2 PID: 58 Comm: kworker/2:1 Tainted: G        W      3.18.19+ #9
+[    5.354256] Workqueue: events musb_id_pin_work
+[    5.354276] <2>-(2)[58:kworker/2:1]task: daefc000 ti: da688000 task.ti: da688000
+[    5.354296] <2>-(2)[58:kworker/2:1]PC is at ncp1854_read_byte+0x38/0x9c
+[    5.354313] <2>-(2)[58:kworker/2:1]LR is at ncp1854_read_byte+0x2c/0x9c
+[    5.354331] <2>-(2)[58:kworker/2:1]pc : [<c032871c>]    lr : [<c0328710>]    psr: 60000113
+[    5.354331] <2>sp : da689e28  ip : da689e28  fp : da689e4c
+[    5.354349] <2>-(2)[58:kworker/2:1]r10: da649c80  r9 : 00000000  r8 : 00000001
+[    5.354364] <2>-(2)[58:kworker/2:1]r7 : 00000001  r6 : da689e57  r5 : c0e6cde8  r4 : 00000000
+[    5.354379] <2>-(2)[58:kworker/2:1]r3 : 00000001  r2 : 00000101  r1 : da689e30  r0 : 00000000
+[    5.354395] <2>-(2)[58:kworker/2:1]Flags: nZCv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment kernel
+[    5.354411] <2>-(2)[58:kworker/2:1]Control: 10c0383d  Table: 4000406a  DAC: 00000015
+[    5.354425] <2>-(2)[58:kworker/2:1]
+[    5.354425] <2>PC: 0xc032869c:
+[    5.354439] 869c  e59f0034 e1d02ab2 e3120004 0a000003 e2800090 e59f1024 e5d42000 ebfd06aa
+[    5.354494] 86bc  e1a00005 e59f1018 e5d42000 ebfcaac3 e89da830 c0cc95c8 c0e6cde8 c0cf69c0
+[    5.354547] 86dc  c0a9bbff c0bc491d e1a0c00d e92dd8f0 e24cb004 e24dd008 e59f507c e1a07000
+[    5.354601] 86fc  e59f0078 e1a06001 e3a04000 e54b401d eb164061 e5950004 e24b101c e3002101
+[    5.354654] 871c  e5d03130 e5617001 e3833a01 e3833008 e5803130 eb0bf498 e1500004 aa000005
+[    5.354707] 873c  e5953004 e59f0034 e5834130 eb163f96 e1a00004 ea000006 e55b301d e59f001c
+[    5.354760] 875c  e5c63000 e5953004 e5834130 eb163f8e e3a00001 e24bd01c e89da8f0 c0e6cde8
+[    5.354812] 877c  c0c96768 e1a0c00d e92dd870 e24cb004 e24dd00c e1a05000 e59f0064 e1a06001
+[    5.354869] <2>-(2)[58:kworker/2:1]
+[    5.354869] <2>LR: 0xc0328690:
+[    5.354883] 8690  e5933000 e3530000 da000007 e59f0034 e1d02ab2 e3120004 0a000003 e2800090
+[    5.354936] 86b0  e59f1024 e5d42000 ebfd06aa e1a00005 e59f1018 e5d42000 ebfcaac3 e89da830
+[    5.354990] 86d0  c0cc95c8 c0e6cde8 c0cf69c0 c0a9bbff c0bc491d e1a0c00d e92dd8f0 e24cb004
+[    5.355044] 86f0  e24dd008 e59f507c e1a07000 e59f0078 e1a06001 e3a04000 e54b401d eb164061
+[    5.355097] 8710  e5950004 e24b101c e3002101 e5d03130 e5617001 e3833a01 e3833008 e5803130
+[    5.355151] 8730  eb0bf498 e1500004 aa000005 e5953004 e59f0034 e5834130 eb163f96 e1a00004
+[    5.355204] 8750  ea000006 e55b301d e59f001c e5c63000 e5953004 e5834130 eb163f8e e3a00001
+[    5.355256] 8770  e24bd01c e89da8f0 c0e6cde8 c0c96768 e1a0c00d e92dd870 e24cb004 e24dd00c
+[    5.355312] <2>-(2)[58:kworker/2:1]
+[    5.355312] <2>SP: 0xda689da8:
+[    5.355326] 9da8  da689dcc 0000c184 00000253 00000000 c08ba374 00000001 c032871c 60000113
+[    5.355379] 9dc8  ffffffff da689e14 da689e4c da689de0 c0013ad8 c0008488 00000000 da689e30
+[    5.355432] 9de8  00000101 00000001 00000000 c0e6cde8 da689e57 00000001 00000001 00000000
+[    5.355484] 9e08  da649c80 da689e4c da689e28 da689e28 c0328710 c032871c 60000113 ffffffff
+[    5.355537] 9e28  00000000 00000000 00000001 c0cc95c8 00000005 00000000 da689e7c da689e50
+[    5.355589] 9e48  c0328960 c03286f0 da689e7c 00689e60 c08ae87c 00000000 c0e6cedc c0e6cee0
+[    5.355641] 9e68  e0c00000 c0e6cedc da689e8c da689e80 c0328d20 c0328908 da689eac da689e90
+[    5.355694] 9e88  c0331c50 c0328d0c da689ee4 da689eb0 c0332ef0 c0e6cf0c da689ee4 da689eb0
+[    5.355750] <2>-(2)[58:kworker/2:1]
+[    5.355750] <2>IP: 0xda689da8:
+[    5.355764] 9da8  da689dcc 0000c184 00000253 00000000 c08ba374 00000001 c032871c 60000113
+[    5.355816] 9dc8  ffffffff da689e14 da689e4c da689de0 c0013ad8 c0008488 00000000 da689e30
+[    5.355869] 9de8  00000101 00000001 00000000 c0e6cde8 da689e57 00000001 00000001 00000000
+[    5.355920] 9e08  da649c80 da689e4c da689e28 da689e28 c0328710 c032871c 60000113 ffffffff
+[    5.355973] 9e28  00000000 00000000 00000001 c0cc95c8 00000005 00000000 da689e7c da689e50
+[    5.356024] 9e48  c0328960 c03286f0 da689e7c 00689e60 c08ae87c 00000000 c0e6cedc c0e6cee0
+[    5.356076] 9e68  e0c00000 c0e6cedc da689e8c da689e80 c0328d20 c0328908 da689eac da689e90
+[    5.356129] 9e88  c0331c50 c0328d0c da689ee4 da689eb0 c0332ef0 c0e6cf0c da689ee4 da689eb0
+[    5.356185] <2>-(2)[58:kworker/2:1]
+[    5.356185] <2>FP: 0xda689dcc:
+[    5.356199] 9dcc  da689e14 da689e4c da689de0 c0013ad8 c0008488 00000000 da689e30 00000101
+[    5.356251] 9dec  00000001 00000000 c0e6cde8 da689e57 00000001 00000001 00000000 da649c80
+[    5.356303] 9e0c  da689e4c da689e28 da689e28 c0328710 c032871c 60000113 ffffffff 00000000
+[    5.356356] 9e2c  00000000 00000001 c0cc95c8 00000005 00000000 da689e7c da689e50 c0328960
+[    5.356408] 9e4c  c03286f0 da689e7c 00689e60 c08ae87c 00000000 c0e6cedc c0e6cee0 e0c00000
+[    5.356461] 9e6c  c0e6cedc da689e8c da689e80 c0328d20 c0328908 da689eac da689e90 c0331c50
+[    5.356514] 9e8c  c0328d0c da689ee4 da689eb0 c0332ef0 c0e6cf0c da689ee4 da689eb0 c03330e0
+[    5.356566] 9eac  c0331bd4 00000000 da688000 da689ef4 da660314 dffb9d00 da688028 dffbb700
+[    5.356622] <2>-(2)[58:kworker/2:1]
+[    5.356622] <2>R1: 0xda689db0:
+[    5.356636] 9db0  00000253 00000000 c08ba374 00000001 c032871c 60000113 ffffffff da689e14
+[    5.356688] 9dd0  da689e4c da689de0 c0013ad8 c0008488 00000000 da689e30 00000101 00000001
+[    5.356741] 9df0  00000000 c0e6cde8 da689e57 00000001 00000001 00000000 da649c80 da689e4c
+[    5.356793] 9e10  da689e28 da689e28 c0328710 c032871c 60000113 ffffffff 00000000 00000000
+[    5.356846] 9e30  00000001 c0cc95c8 00000005 00000000 da689e7c da689e50 c0328960 c03286f0
+[    5.356898] 9e50  da689e7c 00689e60 c08ae87c 00000000 c0e6cedc c0e6cee0 e0c00000 c0e6cedc
+[    5.356951] 9e70  da689e8c da689e80 c0328d20 c0328908 da689eac da689e90 c0331c50 c0328d0c
+[    5.357005] 9e90  da689ee4 da689eb0 c0332ef0 c0e6cf0c da689ee4 da689eb0 c03330e0 c0331bd4
+[    5.357062] <2>-(2)[58:kworker/2:1]
+[    5.357062] <2>R5: 0xc0e6cd68:
+[    5.357075] cd68  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    5.357126] cd88  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    5.357177] cda8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    5.357227] cdc8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    5.357278] cde8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    5.357328] ce08  00000000 e0a0c000 e0a0e000 e0a0a000 00000000 00000000 03390339 c0c96780
+[    5.357381] ce28  00000000 00200200 ffff8af4 dad24000 c032c3a8 da660140 ffffffff ffff8af4
+[    5.357433] ce48  00000002 00000002 00000002 00000001 e0be0000 00000000 00000000 00000000
+[    5.357488] <2>-(2)[58:kworker/2:1]
+[    5.357488] <2>R6: 0xda689dd7:
+[    5.357501] 9dd4  da689de0 c0013ad8 c0008488 00000000 da689e30 00000101 00000001 00000000
+[    5.357553] 9df4  c0e6cde8 da689e57 00000001 00000001 00000000 da649c80 da689e4c da689e28
+[    5.357605] 9e14  da689e28 c0328710 c032871c 60000113 ffffffff 00000000 00000000 00000001
+[    5.357658] 9e34  c0cc95c8 00000005 00000000 da689e7c da689e50 c0328960 c03286f0 da689e7c
+[    5.357710] 9e54  00689e60 c08ae87c 00000000 c0e6cedc c0e6cee0 e0c00000 c0e6cedc da689e8c
+[    5.357762] 9e74  da689e80 c0328d20 c0328908 da689eac da689e90 c0331c50 c0328d0c da689ee4
+[    5.357815] 9e94  da689eb0 c0332ef0 c0e6cf0c da689ee4 da689eb0 c03330e0 c0331bd4 00000000
+[    5.357867] 9eb4  da688000 da689ef4 da660314 dffb9d00 da688028 dffbb700 c0ce91f8 00000000
+[    5.357919] 9ed4  da649c80 da689f24 da689ee8 c003a42c c0332438 da689f0c da689ef8 c00489fc
+[    5.357976] <2>-(2)[58:kworker/2:1]
+[    5.357976] <2>R10: 0xda649c00:
+[    5.357990] 9c00  da649c80 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    5.358041] 9c20  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    5.358091] 9c40  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    5.358142] 9c60  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    5.358192] 9c80  00000000 dffb9e3c da660314 c033242c dffbb700 00000000 da649c98 da649c98
+[    5.358244] 9ca0  daefc000 dffb9d00 dffb9e94 dac40fa8 ffff8c5e 00000000 00000001 00000000
+[    5.358297] 9cc0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    5.358348] 9ce0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    5.358403] <2>-(2)[58:kworker/2:1]Process kworker/2:1 (pid: 58, stack limit = 0xda688240)
+[    5.358419] <2>-(2)[58:kworker/2:1]Stack: (0xda689e28 to 0xda68a000)
+[    5.358437] <2>-(2)[58:kworker/2:1]9e20:                   00000000 00000000 00000001 c0cc95c8 00000005 00000000
+[    5.358458] <2>-(2)[58:kworker/2:1]9e40: da689e7c da689e50 c0328960 c03286f0 da689e7c 00689e60 c08ae87c 00000000
+[    5.358479] <2>-(2)[58:kworker/2:1]9e60: c0e6cedc c0e6cee0 e0c00000 c0e6cedc da689e8c da689e80 c0328d20 c0328908
+[    5.358501] <2>-(2)[58:kworker/2:1]9e80: da689eac da689e90 c0331c50 c0328d0c da689ee4 da689eb0 c0332ef0 c0e6cf0c
+[    5.358522] <2>-(2)[58:kworker/2:1]9ea0: da689ee4 da689eb0 c03330e0 c0331bd4 00000000 da688000 da689ef4 da660314
+[    5.358542] <2>-(2)[58:kworker/2:1]9ec0: dffb9d00 da688028 dffbb700 c0ce91f8 00000000 da649c80 da689f24 da689ee8
+[    5.358563] <2>-(2)[58:kworker/2:1]9ee0: c003a42c c0332438 da689f0c da689ef8 c00489fc 00000000 dffb9d00 dffb9d00
+[    5.358584] <2>-(2)[58:kworker/2:1]9f00: dffb9d00 da688000 da649c80 dffb9d14 da649c98 c0c58e00 da689f5c da689f28
+[    5.358605] <2>-(2)[58:kworker/2:1]9f20: c003a8d0 c003a1e8 00000000 da688028 c003a610 da662e40 00000000 da649c80
+[    5.358625] <2>-(2)[58:kworker/2:1]9f40: c003a610 00000000 00000000 00000000 da689fac da689f60 c003f168 c003a61c
+[    5.358645] <2>-(2)[58:kworker/2:1]9f60: c08ba3d0 00000000 da689f94 da649c80 00000000 00000000 da689f78 da689f78
+[    5.358666] <2>-(2)[58:kworker/2:1]9f80: 00000000 00000000 da689f88 da689f88 da662e40 c003f078 00000000 00000000
+[    5.358685] <2>-(2)[58:kworker/2:1]9fa0: 00000000 da689fb0 c000e9a0 c003f084 00000000 00000000 00000000 00000000
+[    5.358704] <2>-(2)[58:kworker/2:1]9fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    5.358723] <2>-(2)[58:kworker/2:1]9fe0: 00000000 00000000 00000000 00000000 00000013 00000000 00000000 00000000
+[    5.358733] Backtrace: 
+[    5.358762] <2>-(2)[58:kworker/2:1][<c03286e4>] (ncp1854_read_byte) from [<c0328960>] (ncp1854_config_interface+0x64/0x10c)
+[    5.358774]  r7:00000000 r6:00000005 r5:c0cc95c8 r4:00000001
+[    5.358818] <2>-(2)[58:kworker/2:1][<c03288fc>] (ncp1854_config_interface) from [<c0328d20>] (ncp1854_set_otg_en+0x20/0x24)
+[    5.358829]  r8:c0e6cedc r7:e0c00000 r6:c0e6cee0 r5:c0e6cedc r4:00000000
+[    5.358876] <2>-(2)[58:kworker/2:1][<c0328d00>] (ncp1854_set_otg_en) from [<c0331c50>] (mt_usb_set_vbus+0x88/0xa4)
+[    5.358898] <2>-(2)[58:kworker/2:1][<c0331bc8>] (mt_usb_set_vbus) from [<c03330e0>] (musb_id_pin_work+0xcb4/0xf64)
+[    5.358909]  r4:c0e6cf0c
+[    5.358935] <2>-(2)[58:kworker/2:1][<c033242c>] (musb_id_pin_work) from [<c003a42c>] (process_one_work+0x250/0x400)
+[    5.358946]  r10:da649c80 r9:00000000 r8:c0ce91f8 r7:dffbb700 r6:da688028 r5:dffb9d00
+[    5.358985]  r4:da660314
+[    5.359008] <2>-(2)[58:kworker/2:1][<c003a1dc>] (process_one_work) from [<c003a8d0>] (worker_thread+0x2c0/0x404)
+[    5.359019]  r10:c0c58e00 r9:da649c98 r8:dffb9d14 r7:da649c80 r6:da688000 r5:dffb9d00
+[    5.359057]  r4:dffb9d00
+[    5.359081] <2>-(2)[58:kworker/2:1][<c003a610>] (worker_thread) from [<c003f168>] (kthread+0xf0/0x104)
+[    5.359092]  r10:00000000 r9:00000000 r8:00000000 r7:c003a610 r6:da649c80 r5:00000000
+[    5.359129]  r4:da662e40
+[    5.359155] <2>-(2)[58:kworker/2:1][<c003f078>] (kthread) from [<c000e9a0>] (ret_from_fork+0x14/0x34)
+[    5.359167]  r7:00000000 r6:00000000 r5:c003f078 r4:da662e40
+[    5.359205] <2>-(2)[58:kworker/2:1]Code: eb164061 e5950004 e24b101c e3002101 (e5d03130) 
+[    5.359224] <2> (2)[58:kworker/2:1]---[ end trace 3b11ef81fbd5b431 ]---
+[    5.380905] <2>-(2)[58:kworker/2:1]Kernel panic - not syncing: Fatal exception
+[    5.380926] <3>-(3)[0:swapper/3]CPU3: stopping
+[    5.380946] <3>-(3)[0:swapper/3]CPU: 3 PID: 0 Comm: swapper/3 Tainted: G      D W      3.18.19+ #9
+[    5.380956] Backtrace: 
+[    5.380985] <3>-(3)[0:swapper/3][<c0012e58>] (dump_backtrace) from [<c0012fec>] (show_stack+0x18/0x1c)
+[    5.380996]  r6:c0c3b23c r5:ffffffff r4:00000000 r3:00200040
+[    5.381035] <3>-(3)[0:swapper/3][<c0012fd4>] (show_stack) from [<c08b1778>] (dump_stack+0x78/0xc4)
+[    5.381056] <3>-(3)[0:swapper/3][<c08b1700>] (dump_stack) from [<c0015380>] (handle_IPI+0x170/0x32c)
+[    5.381066]  r5:00000005 r4:00000003
+[    5.381093] <3>-(3)[0:swapper/3][<c0015210>] (handle_IPI) from [<c0008618>] (gic_handle_irq+0x5c/0x64)
+[    5.381104]  r10:dacd2000 r9:ffffffed r8:c0c3b650 r7:dacd3f9c r6:c0c60900 r5:dacd3f68
+[    5.381137]  r4:e0802000
+[    5.381158] <3>-(3)[0:swapper/3][<c00085bc>] (gic_handle_irq) from [<c0013b40>] (__irq_svc+0x40/0x74)
+[    5.381172] <3>-(3)[0:swapper/3]Exception stack(0xdacd3f68 to 0xdacd3fb0)
+[    5.381190] <3>-(3)[0:swapper/3]3f60:                   ffffffed 00000000 000001ba c001e720 dacd2000 00000000
+[    5.381210] <3>-(3)[0:swapper/3]3f80: c0c3c180 00000000 c0c3b650 ffffffed dacd2000 dacd3fbc dacd3fc0 dacd3fb0
+[    5.381226] <3>-(3)[0:swapper/3]3fa0: c000fda0 c000fda4 60000113 ffffffff
+[    5.381237]  r6:ffffffff r5:60000113 r4:c000fda4 r3:c000fda0
+[    5.381276] <3>-(3)[0:swapper/3][<c000fd70>] (arch_cpu_idle) from [<c005e294>] (cpu_startup_entry+0x218/0x370)
+[    5.381297] <3>-(3)[0:swapper/3][<c005e07c>] (cpu_startup_entry) from [<c0014f0c>] (secondary_start_kernel+0x214/0x244)
+[    5.381307]  r7:c0d3d444
+[    5.381328] <3>-(3)[0:swapper/3][<c0014cf8>] (secondary_start_kernel) from [<400086a4>] (0x400086a4)
+[    5.381338]  r5:00000015 r4:5ac5c06a
+[    5.381360] <0>-(0)[0:swapper/0]CPU0: stopping
+[    5.381378] <0>-(0)[0:swapper/0]CPU: 0 PID: 0 Comm: swapper/0 Tainted: G      D W      3.18.19+ #9
+[    5.381389] Backtrace: 
+[    5.381416] <0>-(0)[0:swapper/0][<c0012e58>] (dump_backtrace) from [<c0012fec>] (show_stack+0x18/0x1c)
+[    5.381427]  r6:c0c3b23c r5:ffffffff r4:00000000 r3:00200000
+[    5.381464] <0>-(0)[0:swapper/0][<c0012fd4>] (show_stack) from [<c08b1778>] (dump_stack+0x78/0xc4)
+[    5.381483] <0>-(0)[0:swapper/0][<c08b1700>] (dump_stack) from [<c0015380>] (handle_IPI+0x170/0x32c)
+[    5.381494]  r5:00000005 r4:00000000
+[    5.381519] <0>-(0)[0:swapper/0][<c0015210>] (handle_IPI) from [<c0008618>] (gic_handle_irq+0x5c/0x64)
+[    5.381530]  r10:c0c3e000 r9:ffffffed r8:c0c3b650 r7:c0c3ff54 r6:c0c60900 r5:c0c3ff20
+[    5.381564]  r4:e0802000
+[    5.381584] <0>-(0)[0:swapper/0][<c00085bc>] (gic_handle_irq) from [<c0013b40>] (__irq_svc+0x40/0x74)
+[    5.381599] <0>-(0)[0:swapper/0]Exception stack(0xc0c3ff20 to 0xc0c3ff68)
+[    5.381618] <0>-(0)[0:swapper/0]ff20: ffffffed 00000000 000003c8 c001e720 c0c3e000 00000000 c0c3c180 00000000
+[    5.381638] <0>-(0)[0:swapper/0]ff40: c0c3b650 ffffffed c0c3e000 c0c3ff74 c0c3ff78 c0c3ff68 c000fda0 c000fda4
+[    5.381653] <0>-(0)[0:swapper/0]ff60: 60000113 ffffffff
+[    5.381663]  r6:ffffffff r5:60000113 r4:c000fda4 r3:c000fda0
+[    5.381701] <0>-(0)[0:swapper/0][<c000fd70>] (arch_cpu_idle) from [<c005e294>] (cpu_startup_entry+0x218/0x370)
+[    5.381722] <0>-(0)[0:swapper/0][<c005e07c>] (cpu_startup_entry) from [<c08ab8d4>] (rest_init+0x7c/0x94)
+[    5.381733]  r7:ffffffff
+[    5.381756] <0>-(0)[0:swapper/0][<c08ab858>] (rest_init) from [<c0bd0ca4>] (start_kernel+0x34c/0x3b4)
+[    5.381766]  r4:c0c60584 r3:c0c3e000
+[    5.381791] <0>-(0)[0:swapper/0][<c0bd0958>] (start_kernel) from [<40008070>] (0x40008070)
+[    5.381801]  r10:00000000 r9:410fd034 r8:4000406a r7:c0c68cfc r6:c0c2e43c r5:c0c601dc
+[    5.381832]  r4:c0d3d3d4
+[    5.381848] <1>-(1)[0:swapper/1]CPU1: stopping
+[    5.381866] <1>-(1)[0:swapper/1]CPU: 1 PID: 0 Comm: swapper/1 Tainted: G      D W      3.18.19+ #9
+[    5.381875] Backtrace: 
+[    5.381901] <1>-(1)[0:swapper/1][<c0012e58>] (dump_backtrace) from [<c0012fec>] (show_stack+0x18/0x1c)
+[    5.381912]  r6:c0c3b23c r5:ffffffff r4:00000000 r3:00200040
+[    5.381948] <1>-(1)[0:swapper/1][<c0012fd4>] (show_stack) from [<c08b1778>] (dump_stack+0x78/0xc4)
+[    5.381967] <1>-(1)[0:swapper/1][<c08b1700>] (dump_stack) from [<c0015380>] (handle_IPI+0x170/0x32c)
+[    5.381977]  r5:00000005 r4:00000001
+[    5.382002] <1>-(1)[0:swapper/1][<c0015210>] (handle_IPI) from [<c0008618>] (gic_handle_irq+0x5c/0x64)
+[    5.382012]  r10:dacce000 r9:ffffffed r8:c0c3b650 r7:daccff9c r6:c0c60900 r5:daccff68
+[    5.382044]  r4:e0802000
+[    5.382064] <1>-(1)[0:swapper/1][<c00085bc>] (gic_handle_irq) from [<c0013b40>] (__irq_svc+0x40/0x74)
+[    5.382077] <1>-(1)[0:swapper/1]Exception stack(0xdaccff68 to 0xdaccffb0)
+[    5.382095] <1>-(1)[0:swapper/1]ff60:                   ffffffed 00000000 000001ac c001e720 dacce000 00000000
+[    5.382115] <1>-(1)[0:swapper/1]ff80: c0c3c180 00000000 c0c3b650 ffffffed dacce000 daccffbc daccffc0 daccffb0
+[    5.382131] <1>-(1)[0:swapper/1]ffa0: c000fda0 c000fda4 60000113 ffffffff
+[    5.382141]  r6:ffffffff r5:60000113 r4:c000fda4 r3:c000fda0
+[    5.382177] <1>-(1)[0:swapper/1][<c000fd70>] (arch_cpu_idle) from [<c005e294>] (cpu_startup_entry+0x218/0x370)
+[    5.382197] <1>-(1)[0:swapper/1][<c005e07c>] (cpu_startup_entry) from [<c0014f0c>] (secondary_start_kernel+0x214/0x244)
+[    5.382207]  r7:c0d3d444
+[    5.382226] <1>-(1)[0:swapper/1][<c0014cf8>] (secondary_start_kernel) from [<400086a4>] (0x400086a4)
+[    5.382236]  r5:00000015 r4:5ac5c06a
+[    5.404812] Rebooting in 1 seconds..
+[    6.404879] <2>-(2)[58:kworker/2:1]machine_restart, arm_pm_restart(  (null))
+[    6.404893] <2>-(2)[58:kworker/2:1]ARCH_RESET happen!!!
+[    6.404906] <2>-(2)[58:kworker/2:1]arch_reset: cmd = NULL
+[    6.404921] <2>-(2)[58:kworker/2:1]CPU: 2 PID: 58 Comm: kworker/2:1 Tainted: G      D W      3.18.19+ #9
+[    6.404938] Workqueue: events musb_id_pin_work
+[    6.404950] Backtrace: 
+[    6.404975] <2>-(2)[58:kworker/2:1][<c0012e58>] (dump_backtrace) from [<c0012fec>] (show_stack+0x18/0x1c)
+[    6.404985]  r6:00000000 r5:ffffffff r4:00000000 r3:da688000
+[    6.405020] <2>-(2)[58:kworker/2:1][<c0012fd4>] (show_stack) from [<c08b1778>] (dump_stack+0x78/0xc4)
+[    6.405041] <2>-(2)[58:kworker/2:1][<c08b1700>] (dump_stack) from [<c06382e0>] (arch_reset+0x40/0xf8)
+[    6.405051]  r5:00000000 r4:00000000
+[    6.405078] <2>-(2)[58:kworker/2:1][<c06382a0>] (arch_reset) from [<c06383c0>] (mtk_arch_reset_handle+0x28/0x40)
+[    6.405088]  r5:00000000 r4:00000000
+[    6.405115] <2>-(2)[58:kworker/2:1][<c0638398>] (mtk_arch_reset_handle) from [<c0040194>] (notifier_call_chain+0x84/0xd8)
+[    6.405125]  r5:00000000 r4:c0f33194
+[    6.405151] <2>-(2)[58:kworker/2:1][<c0040110>] (notifier_call_chain) from [<c00402ac>] (__atomic_notifier_call_chain+0x40/0x54)
+[    6.405161]  r10:c0c7e22c r9:c0c6a9e4 r8:00000000 r7:c0d3e1a4 r6:00000000 r5:00000000
+[    6.405191]  r4:ffffffff
+[    6.405213] <2>-(2)[58:kworker/2:1][<c004026c>] (__atomic_notifier_call_chain) from [<c00402e0>] (atomic_notifier_call_chain+0x20/0x28)
+[    6.405223]  r7:c0d3d678 r6:000003e8 r5:c0d3d0e8 r4:00000000
+[    6.405257] <2>-(2)[58:kworker/2:1][<c00402c0>] (atomic_notifier_call_chain) from [<c004150c>] (do_kernel_restart+0x20/0x2c)
+[    6.405278] <2>-(2)[58:kworker/2:1][<c00414ec>] (do_kernel_restart) from [<c000fed4>] (machine_restart+0x50/0x98)
+[    6.405298] <2>-(2)[58:kworker/2:1][<c000fe84>] (machine_restart) from [<c0041428>] (emergency_restart+0x1c/0x20)
+[    6.405308]  r5:000003e8 r4:00000001
+[    6.405335] <2>-(2)[58:kworker/2:1][<c004140c>] (emergency_restart) from [<c08ae22c>] (panic+0x140/0x1cc)
+[    6.405356] <2>-(2)[58:kworker/2:1][<c08ae0f0>] (panic) from [<c0013284>] (die+0x294/0x3a4)
+[    6.405365]  r3:00000001 r2:00000000 r1:60000113 r0:c0a44e39
+[    6.405390]  r7:da689c2a
+[    6.405414] <2>-(2)[58:kworker/2:1][<c0012ff0>] (die) from [<c08ae0cc>] (__do_kernel_fault.part.11+0x5c/0x7c)
+[    6.405424]  r10:00000005 r9:00000000 r8:daefc000 r7:da689de0 r6:00000000 r5:00000005
+[    6.405454]  r4:00000130
+[    6.405478] <2>-(2)[58:kworker/2:1][<c08ae070>] (__do_kernel_fault.part.11) from [<c001b490>] (do_page_fault+0x31c/0x37c)
+[    6.405488]  r7:da689de0 r3:da689de0
+[    6.405513] <2>-(2)[58:kworker/2:1][<c001b174>] (do_page_fault) from [<c001b5b4>] (do_translation_fault+0x24/0xb4)
+[    6.405523]  r10:da649c80 r9:00000000 r8:00000001 r7:da689de0 r6:00000005 r5:c0c69a34
+[    6.405553]  r4:00000005
+[    6.405574] <2>-(2)[58:kworker/2:1][<c001b590>] (do_translation_fault) from [<c00084b8>] (do_DataAbort+0x3c/0xa0)
+[    6.405585]  r7:da689de0 r6:00000130 r5:c0c69a34 r4:00000005
+[    6.405618] <2>-(2)[58:kworker/2:1][<c000847c>] (do_DataAbort) from [<c0013ad8>] (__dabt_svc+0x38/0x60)
+[    6.405631] <2>-(2)[58:kworker/2:1]Exception stack(0xda689de0 to 0xda689e28)
+[    6.405650] <2>-(2)[58:kworker/2:1]9de0: 00000000 da689e30 00000101 00000001 00000000 c0e6cde8 da689e57 00000001
+[    6.405670] <2>-(2)[58:kworker/2:1]9e00: 00000001 00000000 da649c80 da689e4c da689e28 da689e28 c0328710 c032871c
+[    6.405684] <2>-(2)[58:kworker/2:1]9e20: 60000113 ffffffff
+[    6.405693]  r7:da689e14 r6:ffffffff r5:60000113 r4:c032871c
+[    6.405732] <2>-(2)[58:kworker/2:1][<c03286e4>] (ncp1854_read_byte) from [<c0328960>] (ncp1854_config_interface+0x64/0x10c)
+[    6.405742]  r7:00000000 r6:00000005 r5:c0cc95c8 r4:00000001
+[    6.405779] <2>-(2)[58:kworker/2:1][<c03288fc>] (ncp1854_config_interface) from [<c0328d20>] (ncp1854_set_otg_en+0x20/0x24)
+[    6.405789]  r8:c0e6cedc r7:e0c00000 r6:c0e6cee0 r5:c0e6cedc r4:00000000
+[    6.405830] <2>-(2)[58:kworker/2:1][<c0328d00>] (ncp1854_set_otg_en) from [<c0331c50>] (mt_usb_set_vbus+0x88/0xa4)
+[    6.405850] <2>-(2)[58:kworker/2:1][<c0331bc8>] (mt_usb_set_vbus) from [<c03330e0>] (musb_id_pin_work+0xcb4/0xf64)
+[    6.405860]  r4:c0e6cf0c
+[    6.405883] <2>-(2)[58:kworker/2:1][<c033242c>] (musb_id_pin_work) from [<c003a42c>] (process_one_work+0x250/0x400)
+[    6.405893]  r10:da649c80 r9:00000000 r8:c0ce91f8 r7:dffbb700 r6:da688028 r5:dffb9d00
+[    6.405924]  r4:da660314
+[    6.405945] <2>-(2)[58:kworker/2:1][<c003a1dc>] (process_one_work) from [<c003a8d0>] (worker_thread+0x2c0/0x404)
+[    6.405955]  r10:c0c58e00 r9:da649c98 r8:dffb9d14 r7:da649c80 r6:da688000 r5:dffb9d00
+[    6.405987]  r4:dffb9d00
+[    6.406009] <2>-(2)[58:kworker/2:1][<c003a610>] (worker_thread) from [<c003f168>] (kthread+0xf0/0x104)
+[    6.406019]  r10:00000000 r9:00000000 r8:00000000 r7:c003a610 r6:da649c80 r5:00000000
+[    6.406050]  r4:da662e40
+[    6.406072] <2>-(2)[58:kworker/2:1][<c003f078>] (kthread) from [<c000e9a0>] (ret_from_fork+0x14/0x34)
+[    6.406082]  r7:00000000 r6:00000000 r5:c003f078 r4:da662e40
+[    6.406275] <2>-(2)[58:kworker/2:1]****************dump wdt reg start*************
+[    6.406287] <2>-(2)[58:kworker/2:1]MTK_WDT_MODE:0x14
+[    6.406299] <2>-(2)[58:kworker/2:1]MTK_WDT_LENGTH:0xf000
+[    6.406310] <2>-(2)[58:kworker/2:1]MTK_WDT_RESTART:0x0
+[    6.406322] <2>-(2)[58:kworker/2:1]MTK_WDT_STATUS:0x40000000
+[    6.406334] <2>-(2)[58:kworker/2:1]MTK_WDT_INTERVAL:0xffe
