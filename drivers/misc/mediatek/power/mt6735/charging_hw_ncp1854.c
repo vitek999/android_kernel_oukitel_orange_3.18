@@ -17,6 +17,10 @@
 #define STATUS_UNSUPPORTED	-1
 #define GETARRAYNUM(array) (sizeof(array)/sizeof(array[0]))
 
+//[+] Vitek999
+#define CONFIG_USB_MTK_HDRC_HCD
+
+
 
 /* ============================================================ // */
 /* Global variable */
@@ -178,7 +182,7 @@ static unsigned int charging_hw_init(void *data)
 	if ((ncp1854_status == 0x8) || (ncp1854_status == 0x9) || (ncp1854_status == 0xA))
 		ncp1854_set_ctrl_vbat(0x1C);	/* VCHG = 4.0V */
 
-	ncp1854_set_ieoc(0x0);
+	ncp1854_set_ieoc(0x2); //[+] Vitek999 0x00 -> 0x02
 	ncp1854_set_iweak(0x3);	/* weak charge current = 300mA */
 
 	ncp1854_set_aicl_en(0x1);	/* enable AICL as PT team suggest */
@@ -240,8 +244,10 @@ static unsigned int charging_set_cv_voltage(void *data)
 	unsigned int array_size;
 	unsigned int set_chr_cv;
 
-	if (batt_cust_data.high_battery_voltage_support)
+//[+] Vitek999
+#if defined(HIGH_BATTERY_VOLTAGE_SUPPORT)
 		cv_value = BATTERY_VOLT_04_350000_V;
+#endif
 
 	/* use nearest value */
 	array_size = GETARRAYNUM(VBAT_CV_VTH);
@@ -316,7 +322,7 @@ static unsigned int charging_set_input_current(void *data)
 	unsigned int register_value;
 	unsigned int current_value = *(unsigned int *) data;
 
-	if (current_value < 60000) {
+	if (current_value < 160000) { //[+] Vitek999 60000 -> 160000
 		array_size = GETARRAYNUM(INPUT_CS_VTH);
 		set_chr_current = bmt_find_closest_level(INPUT_CS_VTH, array_size, current_value);
 		register_value =

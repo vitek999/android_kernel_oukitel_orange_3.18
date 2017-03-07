@@ -58,7 +58,9 @@
 //#define BATTERY_NOTIFY_CASE_0005_TOTAL_CHARGINGTIME
 */
 /* High battery support */
-/*#define HIGH_BATTERY_VOLTAGE_SUPPORT*/
+
+//[+] Vitek999
+#define HIGH_BATTERY_VOLTAGE_SUPPORT
 
 /* JEITA parameter */
 /*#define MTK_JEITA_STANDARD_SUPPORT*/
