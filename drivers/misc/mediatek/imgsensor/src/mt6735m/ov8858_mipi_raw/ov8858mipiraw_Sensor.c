@@ -162,7 +162,7 @@ static imgsensor_info_struct imgsensor_info = {
 
 
 static imgsensor_struct imgsensor = {
-	.mirror = IMAGE_V_MIRROR,//IMAGE_NORMAL,	/* mirrorflip information */
+	.mirror = IMAGE_NORMAL,	/* mirrorflip information */
 	.sensor_mode = IMGSENSOR_MODE_INIT,	/* IMGSENSOR_MODE enum value,record current sensor mode,such as: INIT, Preview, Capture, Video,High Speed Video, Slim Video */
 	.shutter = 0x4C00,	/* current shutter */
 	.gain = 0x200,		/* current gain */
