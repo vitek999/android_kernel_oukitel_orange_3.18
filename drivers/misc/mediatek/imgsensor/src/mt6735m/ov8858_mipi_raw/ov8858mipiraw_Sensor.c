@@ -13,7 +13,7 @@
  *	 Source code of Sensor driver
  *
  *	PengtaoFan
- *	20150716:∏¸–¬≤π≥‰¥Ú”°log÷–∂™ ßµƒ≤Œ ˝
+ *	20150716:Êõ¥Êñ∞Ë°•ÂÖÖÊâìÂç∞log‰∏≠‰∏¢Â§±ÁöÑÂèÇÊï∞
  *------------------------------------------------------------------------------
  * Upper this line, this part is controlled by CC/CQ. DO NOT MODIFY!!
  *============================================================================
@@ -650,10 +650,10 @@ static void sensor_init(void)
 	write_cmos_sensor(0x303f, 0x01);
 	write_cmos_sensor(0x3012, 0x6c);
 	write_cmos_sensor(0x100, 0x00);
-	write_cmos_sensor(0x302, 0x1e);
+	write_cmos_sensor(0x302 , 0x23);
 	write_cmos_sensor(0x303, 0x00);
 	write_cmos_sensor(0x304, 0x03);
-	write_cmos_sensor(0x30d, 0x1f);
+	write_cmos_sensor(0x30d , 0x14);
 	write_cmos_sensor(0x30e, 0x02);
 	write_cmos_sensor(0x30f, 0x04);
 	write_cmos_sensor(0x312, 0x03);
@@ -700,7 +700,7 @@ static void sensor_init(void)
 	write_cmos_sensor(0x3646, 0x83);
 	write_cmos_sensor(0x364a, 0x07);
 	write_cmos_sensor(0x3015, 0x00);
-	write_cmos_sensor(0x3018, 0x72);
+	write_cmos_sensor(0x3018, 0x32);
 	write_cmos_sensor(0x3020, 0x93);
 	write_cmos_sensor(0x3022, 0x01);
 	write_cmos_sensor(0x3031, 0x0a);
@@ -845,18 +845,14 @@ static void sensor_init(void)
 	write_cmos_sensor(0x3813, 0x02);
 	write_cmos_sensor(0x3814, 0x03);
 	write_cmos_sensor(0x3815, 0x01);
-	write_cmos_sensor(0x3820, 0x00);
-	write_cmos_sensor(0x3821, 0x67);
+	write_cmos_sensor(0x3820, 0x06); //00
+	write_cmos_sensor(0x3821, 0x60); //67
 	write_cmos_sensor(0x382a, 0x03);
 	write_cmos_sensor(0x382b, 0x01);
 	write_cmos_sensor(0x3830, 0x08);
 	write_cmos_sensor(0x3836, 0x02);
 	write_cmos_sensor(0x3837, 0x18);
-
-	/* modify for pre cap view diff 20150105 */
-	/* write_cmos_sensor(0x3841, 0xff); */
-	write_cmos_sensor(0x3841, 0xef);
-
+	write_cmos_sensor(0x3841, 0xff);
 	write_cmos_sensor(0x3846, 0x48);
 	write_cmos_sensor(0x3d85, 0x16);
 	write_cmos_sensor(0x3d8c, 0x73);
@@ -911,10 +907,10 @@ static void sensor_init(void)
 	/* write_cmos_sensor(0x4800, 0x6C); */
 	/* CONTIUS MODE ADD BY PENGTAO FAN 20140723 */
 	/* write_cmos_sensor(0x4800, 0x4C); */
-	write_cmos_sensor(0x4800, 0x4C);
+	write_cmos_sensor(0x4800, 0x6C);
 
 	write_cmos_sensor(0x481f, 0x32);
-	write_cmos_sensor(0x4837, 0x16);
+	write_cmos_sensor(0x4837, 0x12);//2lane MIPI 
 	write_cmos_sensor(0x4850, 0x10);
 	write_cmos_sensor(0x4851, 0x32);
 	write_cmos_sensor(0x4b00, 0x2a);
@@ -1547,7 +1543,7 @@ otp_ptr = &otp_struct_obj;
 int read_otp(struct otp_struct *otp_ptr)
 {
 	int otp_flag, addr, temp, i;
-	/* set 0x5002[3] to °∞0°± */
+	/* set 0x5002[3] to ‚Äú0‚Äù */
 	int temp1;
 
 	temp1 = read_cmos_sensor(0x5002);
@@ -1635,7 +1631,7 @@ int read_otp(struct otp_struct *otp_ptr)
 	for (i = 0x7010; i <= 0x720a; i++) {
 		write_cmos_sensor(i, 0);	/* clear OTP buffer, recommended use continuous write to accelarate */
 	}
-	/* set 0x5002[3] to °∞1°± */
+	/* set 0x5002[3] to ‚Äú1‚Äù */
 	temp1 = read_cmos_sensor(0x5002);
 	write_cmos_sensor(0x5002, (0x08 & 0x08) | (temp1 & (~0x08)));
 	return (*otp_ptr).flag;
