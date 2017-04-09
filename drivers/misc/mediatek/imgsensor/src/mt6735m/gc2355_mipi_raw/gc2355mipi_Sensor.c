@@ -725,7 +725,7 @@ static void normal_video_setting(kal_uint16 currefps)
 
 }
 
-static void hs_video_setting()
+static void hs_video_setting(void)
 {
 
     LOG_INF("E\n");
@@ -746,7 +746,7 @@ static void hs_video_setting()
 
 }
 
-static void slim_video_setting()
+static void slim_video_setting(void)
 {
     LOG_INF("E\n");
      // use preview setting
