@@ -650,10 +650,10 @@ static void sensor_init(void)
 	write_cmos_sensor(0x303f, 0x01);
 	write_cmos_sensor(0x3012, 0x6c);
 	write_cmos_sensor(0x100, 0x00);
-	write_cmos_sensor(0x302 , 0x23);
+	write_cmos_sensor(0x302 , 0x1e);
 	write_cmos_sensor(0x303, 0x00);
 	write_cmos_sensor(0x304, 0x03);
-	write_cmos_sensor(0x30d , 0x14);
+	write_cmos_sensor(0x30d , 0x1f);
 	write_cmos_sensor(0x30e, 0x02);
 	write_cmos_sensor(0x30f, 0x04);
 	write_cmos_sensor(0x312, 0x03);
@@ -700,7 +700,7 @@ static void sensor_init(void)
 	write_cmos_sensor(0x3646, 0x83);
 	write_cmos_sensor(0x364a, 0x07);
 	write_cmos_sensor(0x3015, 0x00);
-	write_cmos_sensor(0x3018, 0x32);
+	write_cmos_sensor(0x3018, 0x72);
 	write_cmos_sensor(0x3020, 0x93);
 	write_cmos_sensor(0x3022, 0x01);
 	write_cmos_sensor(0x3031, 0x0a);
@@ -852,7 +852,7 @@ static void sensor_init(void)
 	write_cmos_sensor(0x3830, 0x08);
 	write_cmos_sensor(0x3836, 0x02);
 	write_cmos_sensor(0x3837, 0x18);
-	write_cmos_sensor(0x3841, 0xff);
+	write_cmos_sensor(0x3841, 0xef);
 	write_cmos_sensor(0x3846, 0x48);
 	write_cmos_sensor(0x3d85, 0x16);
 	write_cmos_sensor(0x3d8c, 0x73);
@@ -907,10 +907,10 @@ static void sensor_init(void)
 	/* write_cmos_sensor(0x4800, 0x6C); */
 	/* CONTIUS MODE ADD BY PENGTAO FAN 20140723 */
 	/* write_cmos_sensor(0x4800, 0x4C); */
-	write_cmos_sensor(0x4800, 0x6C);
+	write_cmos_sensor(0x4800, 0x4C);
 
 	write_cmos_sensor(0x481f, 0x32);
-	write_cmos_sensor(0x4837, 0x12);//2lane MIPI 
+	write_cmos_sensor(0x4837, 0x16);//2lane MIPI 
 	write_cmos_sensor(0x4850, 0x10);
 	write_cmos_sensor(0x4851, 0x32);
 	write_cmos_sensor(0x4b00, 0x2a);
