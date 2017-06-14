@@ -177,6 +177,8 @@ static unsigned int charging_hw_init(void *data)
 	/* ncp1854_set_int_mask(0x0); //disable all interrupt */
 	ncp1854_set_int_mask(0x1);	/* enable all interrupt for boost mode status monitor */
 	/* ncp1854_set_tchg_rst(0x1); //reset charge timer */
+	ncp1854_set_pwr_path_(0); //assusdan change from ida
+	
 	ncp1854_set_chgto_dis(0x1);	/* disable charge timer */
 	/* WEAK WAIT, WEAK SAFE, WEAK CHARGE */
 	if ((ncp1854_status == 0x8) || (ncp1854_status == 0x9) || (ncp1854_status == 0xA))
@@ -218,8 +220,8 @@ static unsigned int charging_enable(void *data)
 	if (KAL_TRUE == enable) {
 		ncp1854_set_chg_en(0x1);	/* charger enable */
 		/* Set SPM = 1 */
-#ifdef GPIO_SWCHARGER_EN_PIN
-		mt_set_gpio_mode(GPIO_SWCHARGER_EN_PIN, GPIO_MODE_00);
+#ifdef GPIO_SWCHARGER_EN_PIN  //must be 1
+		mt_set_gpio_mode(GPIO_SWCHARGER_EN_PIN, GPIO_MODE_00); // = 3
 		mt_set_gpio_dir(GPIO_SWCHARGER_EN_PIN, GPIO_DIR_OUT);
 		mt_set_gpio_out(GPIO_SWCHARGER_EN_PIN, GPIO_OUT_ONE);
 #endif
@@ -246,11 +248,11 @@ static unsigned int charging_set_cv_voltage(void *data)
 
 //[+] Vitek999
 #if defined(HIGH_BATTERY_VOLTAGE_SUPPORT)
-		cv_value = BATTERY_VOLT_04_350000_V;
+		cv_value = BATTERY_VOLT_04_350000_V; //4350000
 #endif
 
 	/* use nearest value */
-	array_size = GETARRAYNUM(VBAT_CV_VTH);
+	array_size = GETARRAYNUM(VBAT_CV_VTH); //48
 	set_chr_cv = bmt_find_closest_level(VBAT_CV_VTH, array_size, cv_value);
 
 	register_value =
@@ -276,7 +278,7 @@ static unsigned int charging_get_current(void *data)
 
 	array_size = GETARRAYNUM(CS_VTH);
 	ret_val = ncp1854_get_ichg();	/* IINLIM */
-	if (current_high_flag == 1)
+	if ((current_high_flag == 1)||(ret_val>15))
 		*(unsigned int *) data =
 		    charging_value_to_parameter(CS_VTH, array_size, ret_val) + 160000;
 	else
