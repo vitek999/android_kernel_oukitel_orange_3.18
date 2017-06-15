@@ -177,7 +177,7 @@ static unsigned int charging_hw_init(void *data)
 	/* ncp1854_set_int_mask(0x0); //disable all interrupt */
 	ncp1854_set_int_mask(0x1);	/* enable all interrupt for boost mode status monitor */
 	/* ncp1854_set_tchg_rst(0x1); //reset charge timer */
-	ncp1854_set_pwr_path_(0); //assusdan change from ida
+	ncp1854_set_pwr_path(0); //assusdan change from ida
 	
 	ncp1854_set_chgto_dis(0x1);	/* disable charge timer */
 	/* WEAK WAIT, WEAK SAFE, WEAK CHARGE */
