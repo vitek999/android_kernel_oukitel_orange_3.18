@@ -8,7 +8,7 @@
 
 /* Battery Temperature Protection */
 #define MTK_TEMPERATURE_RECHARGE_SUPPORT
-#define MAX_CHARGE_TEMPERATURE  50
+#define MAX_CHARGE_TEMPERATURE  55
 #define MAX_CHARGE_TEMPERATURE_MINUS_X_DEGREE	47
 #define MIN_CHARGE_TEMPERATURE  0
 #define MIN_CHARGE_TEMPERATURE_PLUS_X_DEGREE	6
@@ -16,25 +16,22 @@
 
 /* Linear Charging Threshold */
 #define V_PRE2CC_THRES 3400
-#define V_CC2TOPOFF_THRES		4050
-#define RECHARGING_VOLTAGE      4110
+#define V_CC2TOPOFF_THRES		4250
+#define RECHARGING_VOLTAGE      4310
 #define CHARGING_FULL_CURRENT    100
 
 /* Charging Current Setting */
 #define USB_CHARGER_CURRENT_SUSPEND			0
 #define USB_CHARGER_CURRENT_UNCONFIGURED	CHARGE_CURRENT_70_00_MA
-#define USB_CHARGER_CURRENT_CONFIGURED		CHARGE_CURRENT_800_00_MA
+#define USB_CHARGER_CURRENT_CONFIGURED		CHARGE_CURRENT_500_00_MA
 
-#define USB_CHARGER_CURRENT					CHARGE_CURRENT_500_00_MA
-#define AC_CHARGER_CURRENT					CHARGE_CURRENT_1000_00_MA
-#define AC_CHARGER_CURRENT_OUTPUT_MAX		CHARGE_CURRENT_1200_00_MA
-#define AC_CHARGER_CURRENT_LIMIT			CHARGE_CURRENT_800_00_MA
-#define AC_CHARGER_CURRENT_OUTPUT_LIMIT_MAX	CHARGE_CURRENT_800_00_MA
-#define NON_STD_AC_CHARGER_CURRENT			CHARGE_CURRENT_800_00_MA
-#define CHARGING_HOST_CHARGER_CURRENT       CHARGE_CURRENT_650_00_MA
-#define APPLE_0_5A_CHARGER_CURRENT          CHARGE_CURRENT_500_00_MA
-#define APPLE_1_0A_CHARGER_CURRENT          CHARGE_CURRENT_650_00_MA
-#define APPLE_2_1A_CHARGER_CURRENT          CHARGE_CURRENT_800_00_MA
+#define USB_CHARGER_CURRENT			CHARGE_CURRENT_500_00_MA
+#define AC_CHARGER_CURRENT			CHARGE_CURRENT_1000_00_MA
+#define NON_STD_AC_CHARGER_CURRENT		CHARGE_CURRENT_500_00_MA
+#define CHARGING_HOST_CHARGER_CURRENT       	CHARGE_CURRENT_650_00_MA
+#define APPLE_0_5A_CHARGER_CURRENT          	CHARGE_CURRENT_500_00_MA
+#define APPLE_1_0A_CHARGER_CURRENT          	CHARGE_CURRENT_650_00_MA
+#define APPLE_2_1A_CHARGER_CURRENT          	CHARGE_CURRENT_800_00_MA
 
 
 /* Precise Tunning */
@@ -63,7 +60,7 @@
 /* High battery support */
 
 //[+] Vitek999
-#define HIGH_BATTERY_VOLTAGE_SUPPORT
+//#define HIGH_BATTERY_VOLTAGE_SUPPORT
 
 /* JEITA parameter */
 /*#define MTK_JEITA_STANDARD_SUPPORT*/
@@ -109,57 +106,5 @@
 #endif
 
 #define MTK_PLUG_OUT_DETECTION
-
-
-
-
-
-
-
-
-
-
-#define WT_CHR_OVP_RESUME	//Other 20150420 huangfusheng.wt add ovp resume 
-#define WT_HW_OVP_THRESHHOLD //Other 20150420 huangfusheng.wt add setting hw ovp threshhold,platform modify
-#define WT_BAT_TEMP_NOTIFY_RESUME //Other 20150420 huangfusheng.wt  over temperature tip range modify  
-//+Other 20150420 huangfusheng.wt  ui_soc sync full in charging
-#define WT_UI_SOC_SYNC_FULL_IN_CHARGING   
-#ifdef WT_UI_SOC_SYNC_FULL_IN_CHARGING
- #define WT_UI_SOC_SYNC_FULL_ITERM  450
-#endif
-//-Other 20150420 huangfusheng.wt ui_soc  sync full in charging
-#define WT_BATTERY_CAPACITY_INFO //Other 20150420 huangfusheng.wt add battery capacity info	
-
-//+Other 20150420 huangfusheng.wt add add low vbat percent tracking
-#define WT_VBAT_LOW_PERCENT_TRACKING
-#ifdef WT_VBAT_LOW_PERCENT_TRACKING
-#define  V_LOW_BAT_CHECK   3600
-#define  VBATSOC_SYNC_TO_SOC_TRACKING_TIME  90
-#define  VBAT_LOW_PERCENT_TRACKING_THRESHHOLD 7
-#endif
-//-Other 20150420 huangfusheng.wt add add low vbat percent tracking
-
-#define WT_UI_SOC_INITIAL  //Other_platform_modify  huangfusheng.wt ADD 20150519  solve ui_soc initial error
-#define WT_BAT_CHARGE_CV_TEMP_LIMIT 	   	 //Other_user_req  huangfusheng.wt  20150520 add set different cv in different temperature
-#define WT_BAT_CHARGE_CURRENT_TEMP_LIMIT //Other_user_req  huangfusheng.wt  20150520 add set charging current in different temperature
-#ifdef WT_BAT_CHARGE_CURRENT_TEMP_LIMIT
-#define AC_CHARGER_CURRENT_LOW_TEMP				CHARGE_CURRENT_1000_00_MA
-#endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif /* _CUST_BAT_H_ */
